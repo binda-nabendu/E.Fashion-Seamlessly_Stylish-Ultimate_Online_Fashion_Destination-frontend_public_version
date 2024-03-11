@@ -17,7 +17,7 @@ export class TopCarouselComponent{
   autoPlay(){
     setInterval(()=>{
       this.nextSlide();
-    }, 2000)
+    }, 5000)
   }
   nextSlide(){
     this.currentSlide = (this.currentSlide + 1) % this.carouselData.length;
