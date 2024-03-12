@@ -1,6 +1,44 @@
-<div class="fixed top-0 left-0 right-0 z-50 bg-[#FFA23A] text-[#ffffff]">
-  <div class="h-16 flex items-center justify-between">
-
-  </div>
-
+<div  class=" h-16">
+<!--actually this will escape to height 16-->
 </div>
+<div class="fixed top-0 left-0 right-0 z-50 bg-[#FFA23A] text-[#ffffff]">
+  <div class="h-16 flex items-center justify-between px-5 lg:px-15">
+      <div class="flex items-center">
+          <div>
+              <img ngSrc="assets/favicon.png" class ="w-8" alt = "Hand Craft" height="512" width="512">
+              <!-- never use src use ngSrc-->
+          </div>
+          <div class="">
+              <div class="flex space-x-4 m-3">
+                  <a routerLink="/" class="text-[#ffffff]" >Demo</a>
+                  <button class="navbar-main-button" (click)="goToSelectCollection('man')" mat-button>Man</button>
+                  <button class="navbar-main-button" (click)="goToSelectCollection('woman')" mat-button>woman</button>
+                  <button class="navbar-main-button" (click)="goToSelectCollection('style')" mat-button>style</button>
+              </div>
+          </div>
+      </div>
+      <div class = "flex items-center">
+          <button (click)="goToOn('cart')" mat-icon-button><mat-icon>shopping_cart</mat-icon></button>
+          <button *ngIf="!isLogIn" (click)="goToOn('cart')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
+          <div *ngIf="isLogIn" class="ml-3 flex items-center">
+              <div class="flex items-center space-x-5">
+                  <span class="text-amber-100">User Name</span>
+                  <button mat-button [matMenuTriggerFor]="userMenu">
+                      <img class = "w-8" src="https://www.primianotucci.com/static/images/avatar-12df3081.png" alt="user-avatar">
+                  </button>
+                  <mat-menu #userMenu="matMenu">
+                      <button mat-menu-item>Profile</button>
+                      <button mat-menu-item>Order</button>
+                      <button mat-menu-item>Logout</button>
+                  </mat-menu>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  <div *ngIf="isNavBarContentOpen" class="modal-container">
+    <app-content [selectedSection]="currentSection"></app-content>
+  </div>
+</div>
+
+

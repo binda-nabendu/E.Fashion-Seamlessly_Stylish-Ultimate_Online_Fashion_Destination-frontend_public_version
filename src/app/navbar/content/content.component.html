@@ -1,1 +1,26 @@
-<p>content works!</p>
+<div class="w-full">
+  <div class="bg-gray-800 text-amber-100 w-full h-1/2 shadow-lg p-6">
+    <div class="flex justify-around">
+      <div class="flex flex-col" *ngFor="let clothSection of category[selectedSection].sections">
+        <h1 class="text-center">{{clothSection.name}}</h1>
+        <button mat-button *ngFor = "let section of clothSection.items">{{section.name}}</button>
+      </div>
+      <div class="hidden lg:block">
+        <div class="mb-5">
+          <img class="w-[19rem] h-[19rem] object-cover object-top rounded-lg"
+               src="https://rukminim1.flixcart.com/image/612/612/kw5ag7k0/kurta/f/j/g/xxl-sg1011-sanganeri-feb-original-imag8w9xbbakjkju.jpeg?q=70"
+               alt="">
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <div class="mb-5">
+          <img class="w-[19rem] h-[19rem] object-cover object-top rounded-lg"
+               src="https://rukminim1.flixcart.com/image/612/612/xif0q/kurta/i/v/x/xxl-br-ad-kt-105-adwyn-peter-original-imagj4zyd2q7t6cg.jpeg?q=70"
+               alt="">
+        </div>
+      </div>
+<!--      <h1 >jai sri ram</h1>-->
+    </div>
+  </div>
+
+</div>

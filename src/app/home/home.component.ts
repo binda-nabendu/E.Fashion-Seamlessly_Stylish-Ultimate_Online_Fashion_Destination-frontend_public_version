@@ -20,7 +20,8 @@ export class HomeComponent {
 ngOnInit(){
   this.manJeans = manJens.slice(0, 6);//i will do it later random ;
   this.womansGouns = gounsPage1.slice(0,6);
-  this.lehengaCholi = lengha_page1.slice(0,6);
+  // this.lehengaCholi = lengha_page1.slice(0,6);
+  this.lehengaCholi = this.womansGouns;
   this.mansKurta = mens_kurta.slice(0,6);
   this.shoes = mensShoesPage1.slice(0,6);
 }
