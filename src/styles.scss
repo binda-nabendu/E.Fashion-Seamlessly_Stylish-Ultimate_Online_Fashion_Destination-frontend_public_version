@@ -10,9 +10,12 @@ body{
   color: #000000;
 }
 .box{
-  box-shadow: #000000 0 7px 15px;
+  box-shadow: #333333 0 7px 15px;
   padding: 15px;
 }
 .hideScrollbar::-webkit-scrollbar{
   display: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

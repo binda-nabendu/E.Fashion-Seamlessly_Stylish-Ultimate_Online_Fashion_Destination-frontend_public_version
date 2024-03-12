@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingPageCartComponent } from './landing-page-cart.component';
+import { HomeProductCardComponent } from './home-product-card.component';
 
-describe('LandingPageCartComponent', () => {
-  let component: LandingPageCartComponent;
-  let fixture: ComponentFixture<LandingPageCartComponent>;
+describe('HomeProductCardComponent', () => {
+  let component: HomeProductCardComponent;
+  let fixture: ComponentFixture<HomeProductCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LandingPageCartComponent]
+      declarations: [HomeProductCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LandingPageCartComponent);
+    fixture = TestBed.createComponent(HomeProductCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
