@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {homeCarouselData} from "../../../Data/mainCarousel";
+import {homeCarouselData} from "../../../../../../Data/mainCarousel";
 
 @Component({
   selector: 'app-top-carousel',
