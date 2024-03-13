@@ -1,0 +1,90 @@
+<div>
+  <main class="px-4 sm:px-6 lg:px-13 pb-10">
+    <div class="flex items-baseline justify-between border-gray-700 pb-6 pt-24">
+      <h1 class="text-4xl font-semibold text-gray-800">Products</h1>
+      <div class="flex items-center">
+        <div>
+          <button mat-button [matMenuTriggerFor]="sortProductMenu">Sort</button>
+          <mat-menu #sortProductMenu="matMenu">
+            <button mat-menu-item>Price: high -> Low</button>
+            <button mat-menu-item>Price: low -> high</button>
+            <button mat-menu-item>Price: high -> Low</button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <section class="pt-7">
+
+      <div class="grid grid-cols-1 gap-7 gap-y-11 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center justify-between">
+            <p class="text-lg">Filters</p>
+            <mat-icon>filter_list</mat-icon>
+          </div>
+
+          <form class="hidden lg:block">
+            <div *ngFor = "let item of colorFilter let lastIdx = last">
+              <div class="py-6">
+                <span>{{item.name}}</span>
+                <div class="pt-6" id="filter-section-1">
+                  <div class="scroll-py-4">
+                    <div *ngFor="let op of item.option">
+                        <div class="flex items-center">
+                          <mat-checkbox
+                            [name]="item.id"
+                            [value]="op.value"
+                            >
+                            <span class="text-sm text-gray-700">
+                              {{op.label}}
+                            </span>
+                          </mat-checkbox>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <mat-divider></mat-divider>
+            </div>
+            <div *ngFor = "let item of priceFilter let lastIdx = last">
+              <div class="py-6">
+                <span>{{item.name}}</span>
+                <div class="pt-6" id="filter-section-0">
+                  <div class="scroll-py-4">
+                    <div *ngFor="let op of item.option">
+                      <div class="flex items-center">
+                        <mat-checkbox
+                          id="'filter - ' + op.value"
+                          [name]="item.id"
+                          [value]="op.value"
+                        >
+                            <span class="text-sm text-gray-700">
+                              {{op.label}}
+                            </span>
+                        </mat-checkbox>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <mat-divider *ngIf="!lastIdx"></mat-divider>
+            </div>
+          </form>
+        </div>
+
+        <div class="lg:col-span-3">
+          <div class="flex flex-wrap justify-evenly">
+            <ng-container *ngFor="let item of selectedCloth">
+              <app-product-card [product]="item"/>
+            </ng-container>
+          </div>
+          Products
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

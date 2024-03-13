@@ -1,0 +1,23 @@
+<div class="product-card w-[17rem] m-3 transition-all cursor-pointer">
+
+  <div class="h-[20rem]">
+    <img class="h-full" [src]="product.imageUrl" alt="product image">
+  </div>
+
+  <div class="text-part p-3 bg-amber-50">
+    <div>
+      <p class="opacity-75">{{ product.brand}}</p>
+      <p>{{ product.title}}</p>
+      <p class="text-green-700">{{ product.color}}</p>
+    </div>
+    <div class="flex flex-wrap justify-between items-center">
+      <p class="text-green-700 font-semibold">{{ product.selling_price}}</p>
+      <div class="flex">
+        <p class="text-red-600 line-through pr-3">{{ product.price}}</p>
+        <p>{{ product.discount}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

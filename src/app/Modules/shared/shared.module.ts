@@ -9,6 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {RouterLink} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
+import { ProductCardComponent } from './Components/product-card/product-card.component';
 
 
 
@@ -16,7 +17,8 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [
     ContentComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import {MatButtonModule} from "@angular/material/button";
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }
