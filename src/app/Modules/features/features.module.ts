@@ -13,6 +13,13 @@ import {MatDivider} from "@angular/material/divider";
 import {MatIcon} from "@angular/material/icon";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {SharedModule} from "../shared/shared.module";
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { CartComponent } from './Components/cart/cart.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { PaymentComponent } from './Components/payment/payment.component';
+import { PaymentDoneComponent } from './Components/payment-done/payment-done.component';
+import { OrderDetailsComponent } from './Components/order-details/order-details.component';
+import { PlaceOrdersComponent } from './Components/place-orders/place-orders.component';
 
 
 
@@ -24,6 +31,13 @@ import {SharedModule} from "../shared/shared.module";
     ItemProductSliderComponent,
     FeatureComponent,
     ProductWithFilterComponent,
+    ProductDetailsComponent,
+    CartComponent,
+    CheckoutComponent,
+    PaymentComponent,
+    PaymentDoneComponent,
+    OrderDetailsComponent,
+    PlaceOrdersComponent,
   ],
   imports: [
     CommonModule,
