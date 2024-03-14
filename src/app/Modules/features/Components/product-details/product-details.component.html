@@ -1,1 +1,72 @@
-<p>product-details works!</p>
+<div class="p-5 lg:p-10">
+  <p class="text-gray-500 pb-10">product/clothes/man/panjabi</p>
+  <section class="lg:grid grid-cols-3 lg:gap-10">
+    <div class="col-span-2 flex items-center flex-col">
+      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/kurta/l/f/r/xl-k-spl668-yellow-sg-leman-original-imagznqcrahgq9rf.jpeg?q=70" alt="product img">
+    </div>
+    <div class=" space-y-10 col-span-1 mt-10 lg:mt-0">
+      <div class="space-y-2">
+        <p class="font-semibold text-gray-700 text-lg">Brand Name</p>
+        <p class="text-xl">Product Title</p>
+      </div>
+      <div class="flex space-x-7 items-center">
+        <p class="text-green-700 font-semibold text-lg">Price: 1200</p>
+        <p class="text-lg line-through text-gray-400">Price: 5000</p>
+
+        <p class="text-2xl lg:text-4xl text-amber-500">50%off</p>
+      </div>
+      <div><app-rating-star-shape/></div>
+      <div>
+        <p class="text-lg font-semibold">Size</p>
+        <mat-radio-group class="space-x-7 font-bold text-amber-500"
+        [(ngModel)]="ProductSize"
+        >
+          <mat-radio-button value="S">S</mat-radio-button>
+          <mat-radio-button value="M">M</mat-radio-button>
+          <mat-radio-button value="L">L</mat-radio-button>
+          <mat-radio-button value="XL">XL</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div>
+        <button class="w-full" style="background: coral; padding: 1.5rem" (click)="addItemToCart()" mat-raised-button>Add To Card</button>
+      </div>
+      <div  class="text-gray-700">
+          <p class="">Product Details</p>
+      </div>
+    </div>
+  </section>
+  <section class="pt-13 pb-13 lg:px-17 py-11">
+    <h1 class="text-lg font-medium pb-4">Customer Review & Rating</h1>
+    <div class="border-t border-gray-700">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <ng-container *ngFor="let individual_review of review">
+          <div class="col-span-1 flex flex-col m-4">
+            <app-user-review [review]="individual_review"></app-user-review>
+          </div>
+        </ng-container>
+      </div>
+<!--      <div class="col-span-1 mt-11 lg:mt-0">-->
+<!--        <div class="box">-->
+<!--          <h1 class="text-xl font-semibold pb-1">Product Rattings</h1>-->
+<!--          <div class="flex items-center, space-x-3 pb-10">-->
+<!--            star-->
+<!--            <p class="opacity-60">232 Rattings</p>-->
+<!--          </div>-->
+<!--          <div class="space-y-3">-->
+<!--            <div>-->
+<!--              <div class="grid grid-cols-12"-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </section>
+  <section class="mt-10">
+    <h2 class="text-gray-600 py-5">Related Products</h2>
+    <div class="flex justify-around flex-wrap">
+      <div class="box" *ngFor="let item of relatedProducts.slice(0,5)">
+        <app-product-card [product]="item"/>
+      </div>
+    </div>
+  </section>
+</div>

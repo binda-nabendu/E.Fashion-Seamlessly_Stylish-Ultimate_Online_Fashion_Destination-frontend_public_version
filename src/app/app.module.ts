@@ -9,22 +9,25 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {NgOptimizedImage} from "@angular/common";
 import {FeaturesModule} from "./Modules/features/features.module";
 import {SharedModule} from "./Modules/shared/shared.module";
+import {RouterOutlet} from "@angular/router";
+import {AdminModule} from "./Modules/admin/admin.module";
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  imports: [
-    BrowserModule,
+    imports: [
+        BrowserModule,
 
-    FeaturesModule,
-    SharedModule,
+        AdminModule,
+
+        FeaturesModule,
+        SharedModule,
 
 
-
-
-    FontAwesomeModule,
-  ],
+        FontAwesomeModule,
+        RouterOutlet,
+    ],
   providers: [
     provideAnimationsAsync()
   ],

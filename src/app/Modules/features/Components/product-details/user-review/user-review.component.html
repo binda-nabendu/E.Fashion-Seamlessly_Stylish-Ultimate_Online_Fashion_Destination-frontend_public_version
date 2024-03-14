@@ -1,0 +1,25 @@
+<div class="review bg-white p-5" >
+  <div class="flex ">
+    <div class="w-[5rem] h-[5rem] mr-7 overflow-hidden">
+      <img class="h-full w-full rounded-full object-top object-cover" *ngIf="review.userIcon" [src]="review.userIcon" alt="">
+    </div>
+
+    <div>
+      <p class="text-gray-600 font-bold">{{ review.userName }}</p>
+      <p class="text-gray-500">{{ review.reviewDate | date }}</p>
+
+      <div class="flex">
+        <div class="stars" *ngFor="let _ of [].constructor(review.stars); let i = index">
+          <mat-icon style="color: #FFA500">star</mat-icon>
+        </div>
+      </div>
+
+      <p>{{ review.comment }}</p>
+      <div class="flex">
+        <div *ngFor="let img of review.imageUrls?.slice(0, 4)">
+          <img class="h-20 mr-4" *ngIf="img.link" [src]="img.link" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

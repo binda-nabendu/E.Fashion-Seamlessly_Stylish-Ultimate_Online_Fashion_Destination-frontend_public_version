@@ -20,6 +20,9 @@ import { PaymentComponent } from './Components/payment/payment.component';
 import { PaymentDoneComponent } from './Components/payment-done/payment-done.component';
 import { OrderDetailsComponent } from './Components/order-details/order-details.component';
 import { PlaceOrdersComponent } from './Components/place-orders/place-orders.component';
+import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
+import {FormsModule} from "@angular/forms";
+import { UserReviewComponent } from './Components/product-details/user-review/user-review.component';
 
 
 
@@ -38,6 +41,7 @@ import { PlaceOrdersComponent } from './Components/place-orders/place-orders.com
     PaymentDoneComponent,
     OrderDetailsComponent,
     PlaceOrdersComponent,
+    UserReviewComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +55,9 @@ import { PlaceOrdersComponent } from './Components/place-orders/place-orders.com
     MatIcon,
     MatCheckbox,
     SharedModule,
+    MatRadioGroup,
+    MatRadioButton,
+    FormsModule,
   ],
   exports:[
     FeatureComponent,

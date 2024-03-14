@@ -10,6 +10,7 @@ import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {RouterLink} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
 import { ProductCardComponent } from './Components/product-card/product-card.component';
+import { RatingStarShapeComponent } from './Components/rating-star-shape/rating-star-shape.component';
 
 
 
@@ -18,7 +19,8 @@ import { ProductCardComponent } from './Components/product-card/product-card.com
     ContentComponent,
     FooterComponent,
     NavbarComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    RatingStarShapeComponent
   ],
   imports: [
     CommonModule,
@@ -36,10 +38,11 @@ import { ProductCardComponent } from './Components/product-card/product-card.com
     ShareIconsModule,
     ShareButtonsModule,
   ],
-  exports: [
-    NavbarComponent,
-    FooterComponent,
-    ProductCardComponent
-  ]
+    exports: [
+        NavbarComponent,
+        FooterComponent,
+        ProductCardComponent,
+        RatingStarShapeComponent
+    ]
 })
 export class SharedModule { }
