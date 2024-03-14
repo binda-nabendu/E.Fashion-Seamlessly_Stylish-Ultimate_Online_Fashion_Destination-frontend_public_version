@@ -1,4 +1,5 @@
 import {Component, HostListener} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +7,11 @@ import {Component, HostListener} from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isLogIn = false;
+  isLogIn = true;
   currentSection: any;
   isNavBarContentOpen: boolean = false;
+  constructor(private router: Router) {
+  }
   goToSelectCollection(section: string){
     this.isNavBarContentOpen = true;
     this.currentSection = section;
@@ -18,6 +21,7 @@ export class NavbarComponent {
     this.isNavBarContentOpen = false;
   }
   goToOn(routLink : any){
+    this.router.navigate([routLink]);
   }
 
   @HostListener('document:click', ['$event'])

@@ -24,7 +24,7 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserReviewComponent } from './Components/product-details/user-review/user-review.component';
 import { AddressComponent } from './Components/checkout/address/address.component';
-
+import { OrderCardComponent } from './Components/order-card/order-card.component';
 
 
 @NgModule({
@@ -44,6 +44,7 @@ import { AddressComponent } from './Components/checkout/address/address.componen
     PlaceOrdersComponent,
     UserReviewComponent,
     AddressComponent,
+    OrderCardComponent,
   ],
   imports: [
     CommonModule,

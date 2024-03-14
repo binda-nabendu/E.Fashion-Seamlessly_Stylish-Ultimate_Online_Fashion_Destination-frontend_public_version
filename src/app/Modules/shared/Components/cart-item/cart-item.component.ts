@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-cart-item',
@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './cart-item.component.css'
 })
 export class CartItemComponent {
+  @Input() isButtonNeed: any;
 
-  chanTotalItem(number: number) {
+  changeTotalItem(number: number) {
 
   }
 

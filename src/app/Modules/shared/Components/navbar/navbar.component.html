@@ -5,7 +5,7 @@
   <div class="h-16 flex items-center justify-between px-5 lg:px-15">
       <div class="flex items-center">
           <div>
-              <img ngSrc="../../../../assets/favicon.png" class ="w-8" alt = "Hand Craft" height="512" width="512">
+              <img ngSrc="assets/favicon.png" class ="w-8" alt = "Hand Craft" height="512" width="512">
               <!-- never use src use ngSrc-->
           </div>
           <div class="">
@@ -19,7 +19,7 @@
       </div>
       <div class = "flex items-center">
           <button (click)="goToOn('cart')" mat-icon-button><mat-icon>shopping_cart</mat-icon></button>
-          <button *ngIf="!isLogIn" (click)="goToOn('cart')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
+          <button *ngIf="!isLogIn" (click)="goToOn('')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
           <div *ngIf="isLogIn" class="ml-3 flex items-center">
               <div class="flex items-center space-x-5">
                   <span class="text-amber-100">User Name</span>
@@ -27,9 +27,9 @@
                       <img class = "w-8" src="https://www.primianotucci.com/static/images/avatar-12df3081.png" alt="user-avatar">
                   </button>
                   <mat-menu #userMenu="matMenu">
-                      <button mat-menu-item>Profile</button>
-                      <button mat-menu-item>Order</button>
-                      <button mat-menu-item>Logout</button>
+                      <button mat-menu-item (click)="goToOn('')">Profile</button>
+                      <button mat-menu-item (click)="goToOn('account/orders')">Order</button>
+                      <button mat-menu-item (click)="goToOn('')">Logout</button>
                   </mat-menu>
               </div>
 

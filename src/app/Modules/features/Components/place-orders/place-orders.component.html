@@ -1,1 +1,23 @@
-<p>place-orders works!</p>
+<div class="py-20 px-5 lg:px-20">
+  <h1 class="text-lg text-center py-5">My Orders</h1>
+   <div class="lg:grid lg:grid-cols-4 gap-5">
+     <div class="lg:col-span-1">
+       <div class="">
+         <div *ngFor="let option of orderType">
+           <div class="flex items-center">
+             <mat-checkbox [id]="option.value" [value]="option.value">
+               <span class="text-sm text-gray-600">{{option.label}}</span>
+             </mat-checkbox>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="lg:col-span-3 space-y-5">
+       <div class="space-y-5" *ngFor="let item of orders">
+         <div class="cursor-pointer" (click)="goToOrderStatusPage('6')" *ngFor="let orderItem of item">
+           <app-order-card/>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
