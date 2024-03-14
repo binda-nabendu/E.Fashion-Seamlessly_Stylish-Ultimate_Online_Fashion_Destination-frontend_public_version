@@ -1,4 +1,4 @@
-<div class="product-card w-[17rem] m-3 transition-all cursor-pointer">
+<div class="product-card w-[17rem] m-3 transition-all cursor-pointer" (click)="navigateToItem('/product-details/',product.id)">
 
   <div class="h-[20rem]">
     <img class="h-full w-full" [src]="product.imageUrl" alt="product image">

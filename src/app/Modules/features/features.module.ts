@@ -21,8 +21,9 @@ import { PaymentDoneComponent } from './Components/payment-done/payment-done.com
 import { OrderDetailsComponent } from './Components/order-details/order-details.component';
 import { PlaceOrdersComponent } from './Components/place-orders/place-orders.component';
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserReviewComponent } from './Components/product-details/user-review/user-review.component';
+import { AddressComponent } from './Components/checkout/address/address.component';
 
 
 
@@ -42,6 +43,7 @@ import { UserReviewComponent } from './Components/product-details/user-review/us
     OrderDetailsComponent,
     PlaceOrdersComponent,
     UserReviewComponent,
+    AddressComponent,
   ],
   imports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { UserReviewComponent } from './Components/product-details/user-review/us
     MatRadioGroup,
     MatRadioButton,
     FormsModule,
+    ReactiveFormsModule,
   ],
   exports:[
     FeatureComponent,

@@ -11,6 +11,8 @@ import {RouterLink} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
 import { ProductCardComponent } from './Components/product-card/product-card.component';
 import { RatingStarShapeComponent } from './Components/rating-star-shape/rating-star-shape.component';
+import { CartItemComponent } from './Components/cart-item/cart-item.component';
+import { AddressCardComponent } from './Components/address-card/address-card.component';
 
 
 
@@ -20,7 +22,9 @@ import { RatingStarShapeComponent } from './Components/rating-star-shape/rating-
     FooterComponent,
     NavbarComponent,
     ProductCardComponent,
-    RatingStarShapeComponent
+    RatingStarShapeComponent,
+    CartItemComponent,
+    AddressCardComponent
   ],
   imports: [
     CommonModule,
@@ -38,11 +42,13 @@ import { RatingStarShapeComponent } from './Components/rating-star-shape/rating-
     ShareIconsModule,
     ShareButtonsModule,
   ],
-    exports: [
-        NavbarComponent,
-        FooterComponent,
-        ProductCardComponent,
-        RatingStarShapeComponent
-    ]
+  exports: [
+    NavbarComponent,
+    FooterComponent,
+    ProductCardComponent,
+    RatingStarShapeComponent,
+    CartItemComponent,
+    AddressCardComponent
+  ]
 })
 export class SharedModule { }
