@@ -1,27 +1,46 @@
-# EcomarceHandicraftFrontend
+# Eccomarce Handicraft Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+This is the frontend repository for the Eccomarce Handicraft project. It's built using Angular for the frontend logic and UI.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Eccomarce Handicraft is an e-commerce platform focusing on handicraft products. This frontend repository contains all the necessary code for the user interface and client-side logic of the application.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- User authentication
+- Browse and search for handicraft products
+- Add products to cart
+- View and manage cart items
+- Checkout process
+- View order history
+- ... (add more features here)
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular: Frontend framework for building the user interface and client-side logic.
+- NgRx: State management library for managing application state in a Redux-style architecture.
+- Bootstrap: CSS framework for responsive and mobile-first web development.
+- TypeScript: Programming language for building scalable web applications.
+- HTML/CSS: Standard web technologies for structuring and styling web pages.
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the project locally, follow these steps:
 
-## Running end-to-end tests
+1. Clone this repository to your local machine.
+2. Install Node.js if you haven't already.
+3. Install Angular CLI globally: `npm install -g @angular/cli`
+4. Install project dependencies: `npm install`
+5. Start the development server: `ng serve`
+6. Open your browser and navigate to `http://localhost:4200`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contributors
 
-## Further help
+- Nabendu Bikash Binda 
+- Email: [binda.nabendu@gmail.com]()
+- website: [nabendu.vercel.app]()
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+
+This project is licensed under the [MIT License](LICENSE).

@@ -19,17 +19,17 @@
       </div>
       <div class = "flex items-center">
           <button (click)="goToOn('cart')" mat-icon-button><mat-icon>shopping_cart</mat-icon></button>
-          <button *ngIf="!isLogIn" (click)="login('')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
-          <div *ngIf="isLogIn" class="ml-3 flex items-center">
+          <button *ngIf="!userProfile" (click)="login('')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
+          <div *ngIf="userProfile" class="ml-3 flex items-center">
               <div class="flex items-center space-x-5">
-                  <span class="text-amber-100">User Name</span>
+                  <span class="text-amber-100">{{userProfile.firstName}}</span>
                   <button mat-button [matMenuTriggerFor]="userMenu">
                       <img class = "w-8" src="https://www.primianotucci.com/static/images/avatar-12df3081.png" alt="user-avatar">
                   </button>
                   <mat-menu #userMenu="matMenu">
                       <button mat-menu-item (click)="goToOn('')">Profile</button>
                       <button mat-menu-item (click)="goToOn('account/orders')">Order</button>
-                      <button mat-menu-item (click)="goToOn('')">Logout</button>
+                      <button mat-menu-item (click)="logout('')">Logout</button>
                   </mat-menu>
               </div>
 

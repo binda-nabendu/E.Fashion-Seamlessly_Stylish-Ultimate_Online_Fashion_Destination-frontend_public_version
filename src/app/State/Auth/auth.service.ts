@@ -13,7 +13,7 @@ export class AuthService{
     constructor(private http: HttpClient, private store: Store) {
     }
     loginService(credentials : any){
-      return this.http.post(this.apuUrl + "signin", credentials).pipe(
+      return this.http.post(this.apuUrl + "/login", credentials).pipe(
         map((user:any)=>{
           console.log('login user', user);
           if(user.jwt){
@@ -32,7 +32,7 @@ export class AuthService{
     }
 
   register(userForm : any){
-    return this.http.post(this.apuUrl + "register", userForm).pipe(
+    return this.http.post(this.apuUrl + "/signup", userForm).pipe(
       map((user:any)=>{
         console.log('Register user done', user);
         if(user.jwt){

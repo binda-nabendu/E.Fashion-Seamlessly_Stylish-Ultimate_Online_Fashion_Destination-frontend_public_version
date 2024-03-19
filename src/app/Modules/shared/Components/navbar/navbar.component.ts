@@ -2,6 +2,10 @@ import {Component, HostListener} from '@angular/core';
 import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {AuthComponent} from "../../../auth/auth.component";
+import {UserService} from "../../../../State/User/user.service";
+import {select, Store} from "@ngrx/store";
+import {AppState} from "../../../../Models/AppState";
+import {userProfileActionLogout} from "../../../../State/User/user.action";
 
 @Component({
   selector: 'app-navbar',
@@ -9,10 +13,22 @@ import {AuthComponent} from "../../../auth/auth.component";
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isLogIn = false;
   currentSection: any;
   isNavBarContentOpen: boolean = false;
-  constructor(private router: Router, private matDialog: MatDialog) {
+  userProfile: any = false;
+  constructor(private router: Router, private matDialog: MatDialog, private userService: UserService, private store: Store<AppState>) {
+  }
+  ngOnInit(){
+    if(localStorage.getItem("jwt"))
+      this.userService.getUserProfileService()
+
+    this.store.pipe(select((store) => store.user)).subscribe((user) =>{
+      this.userProfile = user.userProfile;
+      if(user.userProfile){
+        this.matDialog.closeAll();
+      }
+    })
+
   }
   goToSelectCollection(section: string){
     this.isNavBarContentOpen = true;
@@ -45,6 +61,11 @@ export class NavbarComponent {
       width: "400px",
       disableClose: false
     })
+
+  }
+
+  logout(s: string) {
+    this.userService.logout("");
 
   }
 }
