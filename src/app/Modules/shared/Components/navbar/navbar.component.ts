@@ -1,5 +1,7 @@
 import {Component, HostListener} from '@angular/core';
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {AuthComponent} from "../../../auth/auth.component";
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +9,10 @@ import {Router} from "@angular/router";
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isLogIn = true;
+  isLogIn = false;
   currentSection: any;
   isNavBarContentOpen: boolean = false;
-  constructor(private router: Router) {
+  constructor(private router: Router, private matDialog: MatDialog) {
   }
   goToSelectCollection(section: string){
     this.isNavBarContentOpen = true;
@@ -38,4 +40,11 @@ export class NavbarComponent {
     }
   }
 
+  login(s: string) {
+    this.matDialog.open(AuthComponent, {
+      width: "400px",
+      disableClose: false
+    })
+
+  }
 }

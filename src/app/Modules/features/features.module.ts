@@ -25,6 +25,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserReviewComponent } from './Components/product-details/user-review/user-review.component';
 import { AddressComponent } from './Components/checkout/address/address.component';
 import { OrderCardComponent } from './Components/order-card/order-card.component';
+import { OrderStatusScaleComponent } from './Components/order-status-scale/order-status-scale.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { OrderCardComponent } from './Components/order-card/order-card.component
     UserReviewComponent,
     AddressComponent,
     OrderCardComponent,
+    OrderStatusScaleComponent,
   ],
   imports: [
     CommonModule,

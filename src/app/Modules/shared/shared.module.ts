@@ -13,6 +13,7 @@ import { ProductCardComponent } from './Components/product-card/product-card.com
 import { RatingStarShapeComponent } from './Components/rating-star-shape/rating-star-shape.component';
 import { CartItemComponent } from './Components/cart-item/cart-item.component';
 import { AddressCardComponent } from './Components/address-card/address-card.component';
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 
 
 
@@ -36,6 +37,7 @@ import { AddressCardComponent } from './Components/address-card/address-card.com
     MatIconModule,
     MatMenuTrigger,
     MatButtonModule,
+    MatDialogModule,
 
     NgOptimizedImage,
 

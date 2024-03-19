@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Route, Router} from "@angular/router";
 
 @Component({
   selector: 'app-address',
@@ -7,7 +8,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrl: './address.component.css'
 })
 export class AddressComponent {
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : FormBuilder, private router: Router) {
   }
   addresses: any;
   orderWithAddressSubmitForm: FormGroup=this.formBuilder.group({
@@ -29,5 +30,9 @@ export class AddressComponent {
 
   handlePlaceOrder() {
     console.log(this.orderWithAddressSubmitForm.value)
+  }
+
+  navigateToPlaceOrder() {
+    this.router.navigate([""])
   }
 }

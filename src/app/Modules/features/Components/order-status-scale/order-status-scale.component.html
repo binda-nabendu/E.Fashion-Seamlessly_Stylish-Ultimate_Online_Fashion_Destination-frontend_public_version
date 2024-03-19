@@ -1,0 +1,26 @@
+<div class="flex justify-between space-x-8 w-full">
+  <div *ngFor="let individualStep of steps; let stepIdx = index; let lastItem = last"
+    class="flex justify-between items-center space-x-5">
+    <div [ngClass]="{
+    'bg-green-500':(activeStep==individualStep.title || individualStep.isComplete == true),
+    'bg-gray-300':(activeStep!=individualStep.title && stepIdx<=individualStep.id),
+      }" class="h-8 w-8 rounded-full flex justify-center items-center">
+      <mat-icon>check_circle_outline</mat-icon>
+    </div>
+    <div>
+      <span class="text-gray-500">
+        {{individualStep.title}}
+      </span>
+    </div>
+    <div *ngIf="!lastItem" class="lg:w-[13vw]">
+      <mat-divider [ngClass]="{
+    'text-green-500': activeStep === individualStep.title,
+    'text-gray-500': activeStep !== individualStep.title
+  }"></mat-divider>
+    </div>
+
+  </div>
+  <div class="flex justify-between items-center space-x-5">
+
+  </div>
+</div>

@@ -1,0 +1,1004 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.8",
+  "deps": {
+    "@angular/animations": "^17.2.0",
+    "@angular/cdk": "^17.2.2",
+    "@angular/common": "^17.2.0",
+    "@angular/compiler": "^17.2.0",
+    "@angular/core": "^17.2.0",
+    "@angular/forms": "^17.2.0",
+    "@angular/material": "^17.2.2",
+    "@angular/platform-browser": "^17.2.0",
+    "@angular/platform-browser-dynamic": "^17.2.0",
+    "@angular/router": "^17.2.0",
+    "@fortawesome/angular-fontawesome": "^0.14.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@ngrx/store": "^17.1.1",
+    "@nrwl/angular": "^18.0.8",
+    "ngx-sharebuttons": "^13.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^17.2.3",
+    "@angular/cli": "^17.2.3",
+    "@angular/compiler-cli": "^17.2.0",
+    "@types/jasmine": "~5.1.0",
+    "autoprefixer": "^10.4.18",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "~5.3.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "Ecomarce-handicraft-frontend": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "13044518069027839699"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "5331566439708925252"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17038929134016848735"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "7196216849028481097"
+        },
+        {
+          "file": "angular.json",
+          "hash": "11643535063663869078"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "13798156472305937310"
+        },
+        {
+          "file": "package.json",
+          "hash": "11262415288555413581",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@fortawesome/angular-fontawesome",
+            "npm:@fortawesome/fontawesome-svg-core",
+            "npm:@fortawesome/free-brands-svg-icons",
+            "npm:@fortawesome/free-solid-svg-icons",
+            "npm:@nrwl/angular",
+            "npm:ngx-sharebuttons",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@types/jasmine",
+            "npm:autoprefixer",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "src/Data/Gouns/gouns.js",
+          "hash": "8698225528006374345"
+        },
+        {
+          "file": "src/Data/Gouns/gouns.ts",
+          "hash": "14913451865460045764"
+        },
+        {
+          "file": "src/Data/Kurta/kurta.js",
+          "hash": "7973984412116396025"
+        },
+        {
+          "file": "src/Data/Men/men_jeans.json",
+          "hash": "9928793681589848399"
+        },
+        {
+          "file": "src/Data/Men/men_jeans.ts",
+          "hash": "2856682934015970130"
+        },
+        {
+          "file": "src/Data/Men/men_kurtts.ts",
+          "hash": "5904076414777224866"
+        },
+        {
+          "file": "src/Data/Men/men_shirt.json",
+          "hash": "1045534155761335478"
+        },
+        {
+          "file": "src/Data/Saree/lenghaCholiPage2.js",
+          "hash": "13604149678890292405"
+        },
+        {
+          "file": "src/Data/Saree/page1.ts",
+          "hash": "15662301860285347007"
+        },
+        {
+          "file": "src/Data/Women/LenghaCholi.js",
+          "hash": "8015206914757412965"
+        },
+        {
+          "file": "src/Data/Women/LenghaCholi.json",
+          "hash": "6221118633680532697"
+        },
+        {
+          "file": "src/Data/Women/LenghaCholi.ts",
+          "hash": "8015206914757412965"
+        },
+        {
+          "file": "src/Data/Women/women_dress.json",
+          "hash": "2330215861009108318"
+        },
+        {
+          "file": "src/Data/Women/women_jeans.json",
+          "hash": "13172886531691167254"
+        },
+        {
+          "file": "src/Data/Women/women_top.json",
+          "hash": "9207708186545374621"
+        },
+        {
+          "file": "src/Data/dress/page1.js",
+          "hash": "1348351994343428721"
+        },
+        {
+          "file": "src/Data/mainCarousel.ts",
+          "hash": "13797092810074232235"
+        },
+        {
+          "file": "src/Data/navigation.jsx",
+          "hash": "681183979608733014"
+        },
+        {
+          "file": "src/Data/package.json",
+          "hash": "11918215821341462763"
+        },
+        {
+          "file": "src/Data/pants/men_page1.js",
+          "hash": "1846791662891985364"
+        },
+        {
+          "file": "src/Data/reviews-user.ts",
+          "hash": "7578180117292855015"
+        },
+        {
+          "file": "src/Data/shoes.ts",
+          "hash": "6904997490581033641"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/add-product/add-product.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/add-product/add-product.component.html",
+          "hash": "4709590053682767572"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/add-product/add-product.component.spec.ts",
+          "hash": "13870772819156435734",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/add-product/add-product.component.ts",
+          "hash": "14223739706436552506",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/admin-home.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/admin-home.component.html",
+          "hash": "12225795784935807778"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/admin-home.component.spec.ts",
+          "hash": "8094227845986526856",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/admin-home.component.ts",
+          "hash": "7997004625920103032",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/author-products/author-products.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/author-products/author-products.component.html",
+          "hash": "13001473206194429605"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/author-products/author-products.component.spec.ts",
+          "hash": "4601615578518561379",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/author-products/author-products.component.ts",
+          "hash": "5565595440372830481",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/dashboard/dashboard.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/dashboard/dashboard.component.html",
+          "hash": "4894489786295920269"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/dashboard/dashboard.component.spec.ts",
+          "hash": "2526259107065741811",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/dashboard/dashboard.component.ts",
+          "hash": "246616145337752280",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-customers/my-customers.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-customers/my-customers.component.html",
+          "hash": "1235675787653090273"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-customers/my-customers.component.spec.ts",
+          "hash": "801125149899337112",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-customers/my-customers.component.ts",
+          "hash": "9719181718973111720",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.html",
+          "hash": "3741180988297159546"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.spec.ts",
+          "hash": "15742792041443174390",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.ts",
+          "hash": "1694753324652308142",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/admin-routing.module.ts",
+          "hash": "10780448088589560922",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/admin.module.ts",
+          "hash": "18170212145463287673",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/cart/cart.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/cart/cart.component.html",
+          "hash": "5387211680137179031"
+        },
+        {
+          "file": "src/app/Modules/features/Components/cart/cart.component.spec.ts",
+          "hash": "5704633463566668523",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/cart/cart.component.ts",
+          "hash": "8714961555327136229",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/address/address.component.css",
+          "hash": "8196760916136106247"
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/address/address.component.html",
+          "hash": "5154903220032097573"
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/address/address.component.spec.ts",
+          "hash": "15808888531268225659",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/address/address.component.ts",
+          "hash": "8672827511154738572",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/checkout.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/checkout.component.html",
+          "hash": "4646732655289467091"
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/checkout.component.spec.ts",
+          "hash": "13364441516852861761",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/checkout/checkout.component.ts",
+          "hash": "16781181706454885736",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/feature.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/feature.component.html",
+          "hash": "18134784952156047430"
+        },
+        {
+          "file": "src/app/Modules/features/Components/feature.component.spec.ts",
+          "hash": "15661342568426370540",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/feature.component.ts",
+          "hash": "7267006553102684187",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.html",
+          "hash": "6438834820439241645"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.spec.ts",
+          "hash": "16620822753399027188",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.ts",
+          "hash": "1175494110684438505",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home.component.html",
+          "hash": "2757366451298538170"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home.component.spec.ts",
+          "hash": "5533293743300657749",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/home.component.ts",
+          "hash": "11822495674449848299",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.html",
+          "hash": "4933051401073889583"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.spec.ts",
+          "hash": "10523465549614626841",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.ts",
+          "hash": "9267052382812736701",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/top-carousel/top-carousel.component.html",
+          "hash": "17493530263039061361"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/top-carousel/top-carousel.component.scss",
+          "hash": "12541206253173875211"
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/top-carousel/top-carousel.component.spec.ts",
+          "hash": "16147929217178782608",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/home/top-carousel/top-carousel.component.ts",
+          "hash": "3726124751019787183",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-card/order-card.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-card/order-card.component.html",
+          "hash": "5976007308849176091"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-card/order-card.component.spec.ts",
+          "hash": "2624976126501102981",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-card/order-card.component.ts",
+          "hash": "17189474703954966915",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-details/order-details.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-details/order-details.component.html",
+          "hash": "11773336513641977487"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-details/order-details.component.spec.ts",
+          "hash": "10842194471448075876",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-details/order-details.component.ts",
+          "hash": "17254239103958726842",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-status-scale/order-status-scale.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-status-scale/order-status-scale.component.html",
+          "hash": "10822538086629649812"
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-status-scale/order-status-scale.component.spec.ts",
+          "hash": "5439263115164891588",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/order-status-scale/order-status-scale.component.ts",
+          "hash": "12955662419287554313",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment-done/payment-done.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment-done/payment-done.component.html",
+          "hash": "4620800486026889966"
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment-done/payment-done.component.spec.ts",
+          "hash": "11013270235851908801",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment-done/payment-done.component.ts",
+          "hash": "3746898515407209906",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment/payment.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment/payment.component.html",
+          "hash": "578823561848183894"
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment/payment.component.spec.ts",
+          "hash": "18253081753417238986",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/payment/payment.component.ts",
+          "hash": "3887294541848597944",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/place-orders/place-orders.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/place-orders/place-orders.component.html",
+          "hash": "16519085878231532610"
+        },
+        {
+          "file": "src/app/Modules/features/Components/place-orders/place-orders.component.spec.ts",
+          "hash": "3009278936235124740",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/place-orders/place-orders.component.ts",
+          "hash": "12924717824871230366",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/product-details.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/product-details.component.html",
+          "hash": "18314481045469602646"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/product-details.component.spec.ts",
+          "hash": "16747939181091377932",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/product-details.component.ts",
+          "hash": "3889000767029828490",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/user-review/user-review.component.css",
+          "hash": "3599211421903781892"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/user-review/user-review.component.html",
+          "hash": "11150165810294200147"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/user-review/user-review.component.spec.ts",
+          "hash": "10489909701205482485",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-details/user-review/user-review.component.ts",
+          "hash": "12186687468947993059",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-with-filter/FilterData.ts",
+          "hash": "2553721496754722732"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.html",
+          "hash": "8962404530251533086"
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.spec.ts",
+          "hash": "15840285809928488396",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.ts",
+          "hash": "11885326973420942388",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/features/features.module.ts",
+          "hash": "4231847843969857543",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/address-card/address-card.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/address-card/address-card.component.html",
+          "hash": "176512687323809020"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/address-card/address-card.component.spec.ts",
+          "hash": "17409835193924606539",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/address-card/address-card.component.ts",
+          "hash": "13392145372110531172",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.html",
+          "hash": "15637172332409598213"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.spec.ts",
+          "hash": "14786164607036656286",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.ts",
+          "hash": "7326857558133280175",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/footer/footer.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/footer/footer.component.html",
+          "hash": "16714883381731480612"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/footer/footer.component.spec.ts",
+          "hash": "18162561296503731710",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/footer/footer.component.ts",
+          "hash": "16185408716308776539",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/content/content.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/content/content.component.html",
+          "hash": "4657096025533284070"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/content/content.component.spec.ts",
+          "hash": "3062722903423555257",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/content/content.component.ts",
+          "hash": "8195892154243667180",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/content/data-sub-menu.ts",
+          "hash": "16585199378686113299"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/navbar.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/navbar.component.html",
+          "hash": "16380327746348196033"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/navbar.component.spec.ts",
+          "hash": "15137832229681964661",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/navbar/navbar.component.ts",
+          "hash": "13610190575759397600",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/product-card/product-card.component.html",
+          "hash": "10000106355768962213"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/product-card/product-card.component.scss",
+          "hash": "3260110449867089472"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/product-card/product-card.component.spec.ts",
+          "hash": "16784646190387708326",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/product-card/product-card.component.ts",
+          "hash": "10038105860166600506",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/rating-star-shape/rating-star-shape.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/rating-star-shape/rating-star-shape.component.html",
+          "hash": "92297452238508823"
+        },
+        {
+          "file": "src/app/Modules/shared/Components/rating-star-shape/rating-star-shape.component.spec.ts",
+          "hash": "17408983707216369844",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/Components/rating-star-shape/rating-star-shape.component.ts",
+          "hash": "14224054308065396928",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/shared/shared.module.ts",
+          "hash": "2095028428119068058",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:ngx-sharebuttons",
+            "npm:@angular/material",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "hash": "9018615519181211907",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "hash": "6765737584842892359"
+        },
+        {
+          "file": "src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "16522000832469529213",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "4340394516306512939",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "hash": "12173308066172456470",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:ngx-sharebuttons",
+            "npm:@fortawesome/angular-fontawesome",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/favicon.png",
+          "hash": "6641041382794865224"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "15841714313643728521"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "12246588107753938993",
+          "deps": [
+            "npm:@angular/platform-browser-dynamic"
+          ]
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "16275067425104815431"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "726519995289944200"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "17337579397915052279"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "6830907402848794383"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "15575553540147145788"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

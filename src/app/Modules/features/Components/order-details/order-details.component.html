@@ -1,1 +1,17 @@
-<p>order-details works!</p>
+<div class="py-10 px-5 lg: px-21">
+  <div class="py-5">
+    <h2 class="text-center py-3">Order Status</h2>
+    <app-order-status-scale [activeStep]="steps[2].title" [steps]="steps" />
+  </div>
+  <div class="space-y-10 pt-10">
+    <div class="box px-10">
+      <h1 class="text-lg font-semibold py-5">Shipping Address</h1>
+      <app-address-card/>
+    </div>
+    <div class="space-y-3 mt-20">
+      <div *ngFor="let item of orders">
+        <app-order-card/>
+      </div>
+    </div>
+  </div>
+</div>
