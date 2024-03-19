@@ -11,6 +11,8 @@ import {RouterOutlet} from "@angular/router";
 import {AdminModule} from "./Modules/admin/admin.module";
 import {StoreModule} from "@ngrx/store";
 import {AuthModule} from "./Modules/auth/auth.module";
+import {authReducer} from "./State/Auth/auth.reducer";
+import {userReducer} from "./State/user/user.reducer";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import {AuthModule} from "./Modules/auth/auth.module";
         FontAwesomeModule,
         RouterOutlet,
 
-        StoreModule.forRoot({}, {}),
+        StoreModule.forRoot({auth:authReducer, user: userReducer}, {}),
     ],
   providers: [
     provideAnimationsAsync()
