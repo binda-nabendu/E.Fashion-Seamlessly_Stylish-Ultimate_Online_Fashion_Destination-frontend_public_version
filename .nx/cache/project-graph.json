@@ -11698,6 +11698,11 @@
       },
       {
         "source": "Ecomarce-handicraft-frontend",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "Ecomarce-handicraft-frontend",
         "target": "npm:@nrwl/angular",
         "type": "static"
       },

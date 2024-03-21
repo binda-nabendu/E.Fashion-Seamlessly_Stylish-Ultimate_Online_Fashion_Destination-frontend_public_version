@@ -14,6 +14,7 @@ import {AuthModule} from "./Modules/auth/auth.module";
 import {authReducer} from "./State/Auth/auth.reducer";
 import {userReducer} from "./State/User/user.reducer";
 import {HttpClientModule} from "@angular/common/http";
+import {productReducer} from "./State/Product/product.reducer";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import {HttpClientModule} from "@angular/common/http";
 
         HttpClientModule,
 
-        StoreModule.forRoot({auth:authReducer, user: userReducer}, {}),
+        StoreModule.forRoot({auth:authReducer, user: userReducer, product: productReducer}, {}),
     ],
   providers: [
     provideAnimationsAsync()

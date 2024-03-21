@@ -64,7 +64,7 @@
         },
         {
           "file": "README.md",
-          "hash": "7196216849028481097"
+          "hash": "2449910852370079233"
         },
         {
           "file": "angular.json",
@@ -72,11 +72,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "13798156472305937310"
+          "hash": "11054997381592189757"
         },
         {
           "file": "package.json",
-          "hash": "11262415288555413581",
+          "hash": "9568351143177969323",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/cdk",
@@ -92,6 +92,7 @@
             "npm:@fortawesome/fontawesome-svg-core",
             "npm:@fortawesome/free-brands-svg-icons",
             "npm:@fortawesome/free-solid-svg-icons",
+            "npm:@ngrx/store",
             "npm:@nrwl/angular",
             "npm:ngx-sharebuttons",
             "npm:rxjs",
@@ -200,6 +201,14 @@
         {
           "file": "src/Data/shoes.ts",
           "hash": "6904997490581033641"
+        },
+        {
+          "file": "src/app/Config/api.ts",
+          "hash": "15922282588673156240"
+        },
+        {
+          "file": "src/app/Models/AppState.ts",
+          "hash": "14731136148075962928"
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.css",
@@ -347,6 +356,86 @@
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/auth.component.css",
+          "hash": "16625497779635412454"
+        },
+        {
+          "file": "src/app/Modules/auth/auth.component.html",
+          "hash": "11828173391233265240"
+        },
+        {
+          "file": "src/app/Modules/auth/auth.component.spec.ts",
+          "hash": "2539484435529752038",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/auth.component.ts",
+          "hash": "3930504432733425716",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/auth.module.ts",
+          "hash": "17701205387620759145",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/login/login.component.css",
+          "hash": "15726089979074896005"
+        },
+        {
+          "file": "src/app/Modules/auth/login/login.component.html",
+          "hash": "5183740164936601612"
+        },
+        {
+          "file": "src/app/Modules/auth/login/login.component.spec.ts",
+          "hash": "1323485367575686886",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/login/login.component.ts",
+          "hash": "5317421126289927254",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/sign-up/sign-up.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/auth/sign-up/sign-up.component.html",
+          "hash": "124644867887435841"
+        },
+        {
+          "file": "src/app/Modules/auth/sign-up/sign-up.component.spec.ts",
+          "hash": "8770151021646096431",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/auth/sign-up/sign-up.component.ts",
+          "hash": "16384443796396726593",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -842,7 +931,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.html",
-          "hash": "16380327746348196033"
+          "hash": "10080952370237397864"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.spec.ts",
@@ -853,10 +942,12 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.ts",
-          "hash": "13610190575759397600",
+          "hash": "15584011394044105336",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@angular/material",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -906,13 +997,61 @@
         },
         {
           "file": "src/app/Modules/shared/shared.module.ts",
-          "hash": "2095028428119068058",
+          "hash": "4540968685264325846",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
             "npm:ngx-sharebuttons",
             "npm:@angular/material",
             "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/State/Auth/auth.action.ts",
+          "hash": "8764036690297049651",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Auth/auth.reducer.ts",
+          "hash": "8366960037008625480",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Auth/auth.service.ts",
+          "hash": "9945742591174378610",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/State/User/user.action.ts",
+          "hash": "17083693721343245488",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/User/user.reducer.ts",
+          "hash": "15278698917952543302",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/User/user.service.ts",
+          "hash": "11449103295349263478",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@ngrx/store",
+            "npm:rxjs"
           ]
         },
         {
@@ -941,21 +1080,22 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "4340394516306512939",
+          "hash": "16505488700141497457",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "12173308066172456470",
+          "hash": "4928024528936460500",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
-            "npm:ngx-sharebuttons",
             "npm:@fortawesome/angular-fontawesome",
-            "npm:@angular/common",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@ngrx/store",
+            "npm:@angular/common"
           ]
         },
         {
