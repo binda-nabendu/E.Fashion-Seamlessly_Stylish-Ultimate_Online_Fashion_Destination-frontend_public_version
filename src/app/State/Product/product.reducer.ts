@@ -5,8 +5,6 @@ import {
   findProductByIdFailure,
   findProductByIdSuccess
 } from "./product.action";
-import {state} from "@angular/animations";
-import {error} from "@angular/compiler-cli/src/transformers/util";
 
 const initialState={
   products:[],
