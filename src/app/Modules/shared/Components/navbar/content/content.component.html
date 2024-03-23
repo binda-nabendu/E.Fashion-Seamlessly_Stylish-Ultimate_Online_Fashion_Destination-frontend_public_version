@@ -1,9 +1,9 @@
 <div class="w-full">
   <div class="bg-white text-amber-700 w-full h-1/2 shadow-lg p-6">
     <div class="flex justify-around">
-      <div class="flex flex-col" *ngFor="let clothSection of category[selectedSection].sections">
-        <h1 class="text-center">{{clothSection.name}}</h1>
-        <button mat-button *ngFor = "let section of clothSection.items">{{section.name}}</button>
+      <div class="flex flex-col" *ngFor="let sub_section of category[selectedSection].sections">
+        <h1 class="text-center">{{sub_section.name}}</h1>
+        <button mat-button *ngFor = "let sub_sub_section of sub_section.items" (click)="navigateMenuAddress('/' + selectedSection +'/' + sub_section.id + '/' + sub_sub_section.id)">{{sub_sub_section.name}}</button>
       </div>
       <div class="hidden lg:block">
         <div class="mb-5">

@@ -21,8 +21,8 @@ export const navigation_data = {
         id: 'clothing',
         name:'Clothing',
         items:[
-          {name: 'Tops', id:"top", href:`{woman/clothing/tops}`},
-          {name: 'Dresses', id:"women_dress", href:`#`},
+          {name: 'Tops', id:'top', href:`{woman/clothing/tops}`},
+          {name: 'Dresses', id:"Dress", href:`#`},
           {name: 'Pants', id:"women_jeans"},
 
         ]
@@ -62,7 +62,7 @@ export const navigation_data = {
         name:'Clothing',
         items:[
           {name: 'Tops', id:"top", href:`{woman/clothing/tops}`},
-          {name: 'Dresses', id:"women_dress", href:`#`},
+          {name: 'Dresses', id:"Dress", href:`#`},
           {name: 'Pants', id:"women_jeans"},
 
         ]

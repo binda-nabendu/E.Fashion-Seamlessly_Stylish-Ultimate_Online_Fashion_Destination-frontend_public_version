@@ -3,7 +3,6 @@ import {BASE_API_URL} from "../../Config/api";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Store} from "@ngrx/store";
 import {ActivatedRoute, Route} from "@angular/router";
-import {data} from "autoprefixer";
 import {catchError, map, of} from "rxjs";
 import {
   findProductByFiltersFailure,
@@ -20,7 +19,7 @@ export class ProductService{
   API_BASE_URL = BASE_API_URL + "/api/products";
 
   constructor(private store: Store, private httpClient: HttpClient,
-              private route: Route, private activeRoute: ActivatedRoute) {
+              private activeRoute: ActivatedRoute) {
 
   }
   private getHeaders(): HttpHeaders{
@@ -54,10 +53,11 @@ export class ProductService{
       .set('pageSize', pageSize);
 
     const headers = this.getHeaders(); //if this name is change it won't work
-    return this.httpClient.get(`${this.API_BASE_URL}/products`,{headers, params})
+    return this.httpClient.get(`${this.API_BASE_URL}/`,{headers, params})
       .pipe(
         map((data: any)=>{
-          return findProductByFiltersSuccess({payload: requestPerm})
+          console.log(data)
+          return findProductByFiltersSuccess({payload: data})
         }),
         catchError((error: any)=>{
           return of(findProductByFiltersFailure(
