@@ -1031,6 +1031,78 @@
           ]
         },
         {
+          "file": "src/app/State/Cart/cart.action.ts",
+          "hash": "1673073951774530010",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Cart/cart.reducer.ts",
+          "hash": "2876923778899093373",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Cart/cart.service.ts",
+          "hash": "10242875239422464374",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/State/Order/order.action.ts",
+          "hash": "18018797108143278474",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Order/order.reducer.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/State/Order/order.service.ts",
+          "hash": "3081320768481265434",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/State/Product/product.action.ts",
+          "hash": "983033502822301420",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Product/product.reducer.ts",
+          "hash": "753098163144961040",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Product/product.service.ts",
+          "hash": "9444545880641726913",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@ngrx/store",
+            "npm:@angular/router",
+            "npm:autoprefixer",
+            "npm:rxjs"
+          ]
+        },
+        {
           "file": "src/app/State/User/user.action.ts",
           "hash": "17083693721343245488",
           "deps": [
@@ -1088,7 +1160,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "4928024528936460500",
+          "hash": "16177571334800804901",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
