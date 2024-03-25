@@ -1,18 +1,18 @@
 <div class="p-5">
   <div class="flex items-center">
     <div class="w-[5rem] h-[7rem] lg:w-[9rem] lg:h-[11rem]">
-      <img class="w-full h-full object-cover object-top" src="https://rukminim1.flixcart.com/image/612/612/kmns7m80/jean/9/5/o/36-black-36-coper-buck-original-imagfg9edbsneu2s.jpeg?q=70" alt="">
+      <img class="w-full h-full object-cover object-top" [src]="cartItem.product.imageUrl" alt="">
     </div>
     <div class="ml-5 space-y-1">
       <p class="font-semibold">
-        Demo Cloth title
+        {{cartItem.product.title}}
       </p>
-      <p class="text-gray-600">Size : M, Black</p>
-      <p class="text-gray-600 mt-2">Seller: Myshop</p>
+      <p class="text-gray-600">Size : {{cartItem.size}} | Color: {{cartItem.product.color.length < 1 ? 'As Shown As': cartItem.product.color}}</p>
+      <p class="text-gray-600 mt-2">Seller: {{cartItem.product.brand}}</p>
       <div class="flex space-x-2 items-center pt-3">
-        <p class="text-gray-500 line-through">$8373</p>
-        <p class="text-amber-500">$2322</p>
-        <p class="text-green-700 font-bold">40%off</p>
+        <p class="text-amber-500">${{cartItem.discountedPrice}}</p>
+        <p class="text-gray-500 line-through">${{cartItem.price}}</p>
+        <p class="text-green-700 font-bold">Discount: {{cartItem.discountPersent ? cartItem.discountPersent : 0}}%off</p>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
     <div class="example-button-container">
       <button mat-mini-fab color="accent" (click)="changeTotalItem(-1)" [disabled] = "false"><mat-icon>remove</mat-icon></button>
     </div>
-    <div class="py-1 px-7 border border-gray-200 rounded-sm items-center">3</div>
+    <div class="py-1 px-7 border border-gray-200 rounded-sm items-center">{{cartItem.quantity}}</div>
     <div class="example-button-container">
       <button mat-mini-fab style="background: green" (click)="changeTotalItem(1)" [disabled] = "false"><mat-icon>add</mat-icon></button>
     </div>

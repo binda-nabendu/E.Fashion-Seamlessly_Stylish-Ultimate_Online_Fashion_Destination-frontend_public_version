@@ -2,16 +2,16 @@
   <div class="py-11 lg:grid grid-cols-5 lg:px-15 relative">
     <section class="lg:col-span-3 lg:px-5">
       <div class="box p-5 space-y-3">
-        <ng-container *ngIf="cart">
-          <div *ngFor="let product of cart; let lastItem = last">
-            <app-cart-item [isButtonNeed]="true"/>
+        <ng-container *ngIf="cart_item">
+          <div *ngFor="let product of cart_item; let lastItem = last">
+            <app-cart-item [cartItem]="product" [isButtonNeed]="true"/>
             <mat-divider *ngIf="!lastItem"></mat-divider>
           </div>
         </ng-container>
       </div>
     </section>
     <section class="col-span-2 px-5 sticky top=0 h-[100vh] mt-5">
-      <ng-container *ngIf="cart">
+      <ng-container *ngIf="cart_item">
         <div class="box rounded-md">
           <p class="text-amber-500 text-2xl pb-4">Price Details</p>
           <mat-divider></mat-divider>

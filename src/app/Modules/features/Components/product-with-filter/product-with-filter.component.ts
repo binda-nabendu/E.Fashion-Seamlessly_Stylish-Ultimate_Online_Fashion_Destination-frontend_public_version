@@ -15,6 +15,7 @@ export class ProductWithFilterComponent {
   colorFilter: any;
   priceFilter: any;
   selectedCloth: any;
+  category: any;
   constructor(private router: Router, private activatedRoute : ActivatedRoute,
               private productService: ProductService, private store: Store<AppState>) {
   }
@@ -39,21 +40,49 @@ export class ProductWithFilterComponent {
     this.colorFilter = cloth_filter;
     this.priceFilter = price_filter;
     this.selectedCloth = mensShoesPage1;
-    this.activatedRoute.params.subscribe((params)=>{
+    this.activatedRoute.paramMap.subscribe((params)=>{
+      this.category = params.get('label3');
       let reqData = {
-        category: params['label3'],
+        category: this.category,
         colors: [],
         sizes: [],
         minPrice: 0,
-        maxPrice: 100000,
+        maxPrice: 1000000000,
         minDiscount: 0,
         pageNumber: 0,
         pageSize: 10,
         sort: 'price_low',
-        stock: null,
-      };
+        stock:null,
+      }
       this.productService.findProductByFilterService(reqData);
     });
+    this.activatedRoute.queryParams.subscribe((params)=>{
+      const color = params["color"]
+      const size = params["size"]
+      const priceRange = params["price"]
+      const minPrice = priceRange ?.split("-")[0]
+      const maxPrice = priceRange ?.split("-")[1]
+      const minDiscount = params["discount"]
+      const pageNumber = params["pageNumber"]
+      const pageSize = params["pageSize"]
+      const sort = params["sort"]
+      const stock = params["stock"]
+
+      console.log(this.category);
+      let reqData = {
+        category: this.category,
+        colors: color ? [color].join(",") : [],
+        sizes: size ? size : [],
+        minPrice: minPrice ? minPrice : 0,
+        maxPrice: maxPrice ? maxPrice : 1000000000,
+        minDiscount: minDiscount ? minDiscount : 0,
+        pageNumber: pageNumber ? pageNumber : 0,
+        pageSize: pageSize ? pageSize : 10,
+        sort: sort ? sort : 'price_low',
+        stock: stock ? stock : null,
+      }
+      this.productService.findProductByFilterService(reqData);
+    })
     this.store.pipe(select((store: AppState)=>store.product)).subscribe((product)=>{
       this.selectedCloth = product.products.content;
     })

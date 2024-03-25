@@ -1,37 +1,34 @@
-<div class="p-5 lg:p-10">
+<div class="p-5 lg:p-10" *ngIf="product">
   <p class="text-gray-500 pb-10">product/clothes/man/panjabi</p>
   <section class="lg:grid grid-cols-3 lg:gap-10">
     <div class="col-span-2 flex items-center flex-col">
-      <img src="https://rukminim1.flixcart.com/image/612/612/xif0q/kurta/l/f/r/xl-k-spl668-yellow-sg-leman-original-imagznqcrahgq9rf.jpeg?q=70" alt="product img">
+      <img [src]="product.imageUrl" alt="product img">
     </div>
     <div class=" space-y-10 col-span-1 mt-10 lg:mt-0">
       <div class="space-y-2">
-        <p class="font-semibold text-gray-700 text-lg">Brand Name</p>
-        <p class="text-xl">Product Title</p>
+        <p class="font-semibold text-gray-700 text-lg">{{product.brand}}</p>
+        <p class="text-xl">{{product.title}}</p>
       </div>
       <div class="flex space-x-7 items-center">
-        <p class="text-green-700 font-semibold text-lg">Price: 1200</p>
-        <p class="text-lg line-through text-gray-400">Price: 5000</p>
+        <p class="text-green-700 font-semibold text-lg">{{product.discountedPrice}}</p>
+        <p class="text-lg line-through text-gray-400">{{product.price}}</p>
 
-        <p class="text-2xl lg:text-4xl text-amber-500">50%off</p>
+        <p class="text-2xl lg:text-4xl text-amber-500">{{product.discountPercent}} %off</p>
       </div>
       <div><app-rating-star-shape/></div>
       <div>
         <p class="text-lg font-semibold">Size</p>
-        <mat-radio-group class="space-x-7 font-bold text-amber-500"
-        [(ngModel)]="ProductSize"
-        >
-          <mat-radio-button value="S">S</mat-radio-button>
-          <mat-radio-button value="M">M</mat-radio-button>
-          <mat-radio-button value="L">L</mat-radio-button>
-          <mat-radio-button value="XL">XL</mat-radio-button>
+        <mat-radio-group class="space-x-7 font-bold text-amber-500" [(ngModel)]="productSize" (change)="changeSize($event)">
+          <mat-radio-button *ngFor="let s of product.size" [value]="s">{{ s.name }}</mat-radio-button>
         </mat-radio-group>
+
       </div>
       <div>
         <button class="w-full" style="background: coral; padding: 1.5rem" (click)="addItemToCart()" mat-raised-button>Add To Card</button>
       </div>
       <div  class="text-gray-700">
-          <p class="">Product Details</p>
+        <p class="font-bold">Product Details :</p>
+        <p class="">{{product.description}}</p>
       </div>
     </div>
   </section>

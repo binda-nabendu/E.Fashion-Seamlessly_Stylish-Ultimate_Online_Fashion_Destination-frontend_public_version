@@ -17,7 +17,7 @@ import {
 })
 
 export class CartService{
-  API_BASE_URL = BASE_API_URL + '/cart';
+  API_BASE_URL = BASE_API_URL + '/api/user/cart';
   constructor(private httpClient: HttpClient, private router: Router,
               private activeRoure: ActivatedRoute, private store: Store) {
 
@@ -29,7 +29,7 @@ export class CartService{
     });
   }
   getCartService() {
-    const url = this.API_BASE_URL+"/api/cart"
+    const url = this.API_BASE_URL+"/"
     const headers = this.getHttpHeadersWithJWT();
     return this.httpClient.get(url, {headers})
       .pipe(
@@ -44,7 +44,7 @@ export class CartService{
       .subscribe((action)=>this.store.dispatch(action));
   }
   addItemToCartService(reqData: any){
-    const url = this.API_BASE_URL+"/api/cart/add"
+    const url = this.API_BASE_URL+"/add"
     const headers = this.getHttpHeadersWithJWT();
     return this.httpClient.put(url, reqData, {headers})
       .pipe(

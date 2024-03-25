@@ -1,12 +1,18 @@
 import {createReducer, on} from "@ngrx/store";
 import {
-  findProductByFiltersFailure,
+  findProductByFiltersFailure, findProductByFiltersRequest,
   findProductByFiltersSuccess,
-  findProductByIdFailure,
+  findProductByIdFailure, findProductByIdRequest,
   findProductByIdSuccess
 } from "./product.action";
-
-const initialState={
+export interface productInterface {
+  products: any[],
+  content: any,
+  loading: boolean,
+  error: any,
+  product: any
+}
+const initialState: productInterface={
   products:[],
   content: null,
   loading: false,
@@ -16,23 +22,31 @@ const initialState={
 
 export const productReducer = createReducer(
   initialState,
-  on(findProductByFiltersSuccess, (state,{payload})=>({
-  ...state, products: payload, content: payload.content,
-      error: null, product: null})
-    ),
-  on(findProductByFiltersFailure, (state, {error})=>({
-    ...state, error: error,
-    loading: false
+  on(findProductByFiltersRequest, findProductByIdRequest, (state)=>({
+      ...state,
+      loading: true,
+      error: null
     })
   ),
+  on(findProductByFiltersSuccess, (state,{payload})=>({
+      ...state,
+      products: payload,
+      content: payload.content,
+      loading: false,
+      error: null,
+      product: null
+    })
+    ),
   on(findProductByIdSuccess, (state, {payload})=>({
     ...state,
     product: payload,
     loading: false,
+    error: null,
+    products: []
   })),
-  on(findProductByIdFailure, (state, {error})=>({
+  on(findProductByFiltersFailure, findProductByIdFailure, (state, {error})=>({
     ...state,
-    error: error,
-    loading: false
+    loading: false,
+    error: error
   }))
   )

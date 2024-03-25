@@ -6,9 +6,8 @@
         <div>
           <button mat-button [matMenuTriggerFor]="sortProductMenu">Sort</button>
           <mat-menu #sortProductMenu="matMenu">
-            <button mat-menu-item>Price: high -> Low</button>
-            <button mat-menu-item>Price: low -> high</button>
-            <button mat-menu-item>Price: high -> Low</button>
+            <button (click)="filterAccording('price_low', 'sort')" mat-menu-item>Price: high -> Low</button>
+            <button (click)="filterAccording('price_high', 'sort')" mat-menu-item>Price: low -> high</button>
           </mat-menu>
         </div>
       </div>

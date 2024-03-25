@@ -176,7 +176,7 @@
         },
         {
           "file": "src/Data/dress/page1.js",
-          "hash": "1348351994343428721"
+          "hash": "7758858730846744061"
         },
         {
           "file": "src/Data/mainCarousel.ts",
@@ -757,7 +757,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.html",
-          "hash": "18314481045469602646"
+          "hash": "10256041982242414355"
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.spec.ts",
@@ -768,10 +768,12 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.ts",
-          "hash": "3889000767029828490",
+          "hash": "12540013752352977902",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:tailwindcss",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -806,7 +808,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.html",
-          "hash": "8962404530251533086"
+          "hash": "17449615185255502200"
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.spec.ts",
@@ -817,10 +819,11 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.ts",
-          "hash": "11885326973420942388",
+          "hash": "15202384690982227931",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -905,7 +908,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/content/content.component.html",
-          "hash": "4657096025533284070"
+          "hash": "8041128833656718215"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/content/content.component.spec.ts",
@@ -916,14 +919,15 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/content/content.component.ts",
-          "hash": "8195892154243667180",
+          "hash": "2286072207602197917",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/router"
           ]
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/content/data-sub-menu.ts",
-          "hash": "16585199378686113299"
+          "hash": "13758484501766268086"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.css",
@@ -952,7 +956,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/product-card/product-card.component.html",
-          "hash": "10000106355768962213"
+          "hash": "3553822213849232042"
         },
         {
           "file": "src/app/Modules/shared/Components/product-card/product-card.component.scss",
@@ -1057,18 +1061,21 @@
         },
         {
           "file": "src/app/State/Order/order.action.ts",
-          "hash": "18018797108143278474",
+          "hash": "10309046484245613359",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Order/order.reducer.ts",
-          "hash": "3244421341483603138"
+          "hash": "8703185226311517103",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
         },
         {
           "file": "src/app/State/Order/order.service.ts",
-          "hash": "3081320768481265434",
+          "hash": "9185323694627206060",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/router",
@@ -1092,13 +1099,12 @@
         },
         {
           "file": "src/app/State/Product/product.service.ts",
-          "hash": "9444545880641726913",
+          "hash": "12564255239229915396",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
             "npm:@ngrx/store",
             "npm:@angular/router",
-            "npm:autoprefixer",
             "npm:rxjs"
           ]
         },
@@ -1160,7 +1166,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "16177571334800804901",
+          "hash": "15952383911332301899",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",

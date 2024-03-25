@@ -18,7 +18,7 @@ export class UserService {
       this.authorizationJwtHeaders = new HttpHeaders().set("Authorization", `Bearer ${localStorage.getItem("jwt")}`)
       return this.http.get(this.apuUrl + "/profile", {headers: this.authorizationJwtHeaders}).pipe(
         map((user:any)=>{
-          console.log('login user', user);
+          // console.log('login user', user);
           return userProfileActionSuccess({userProfile:user})
         }),
         catchError((error)=>{

@@ -7,6 +7,10 @@ import {Component, Input} from '@angular/core';
 })
 export class CartItemComponent {
   @Input() isButtonNeed: any;
+  @Input() cartItem: any;
+  ngOnInit(){
+    console.log("cart item component", this.cartItem);
+  }
 
   changeTotalItem(number: number) {
 

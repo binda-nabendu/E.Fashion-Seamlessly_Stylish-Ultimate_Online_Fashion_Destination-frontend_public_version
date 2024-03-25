@@ -56,7 +56,7 @@ export class ProductService{
     return this.httpClient.get(`${this.API_BASE_URL}/`,{headers, params})
       .pipe(
         map((data: any)=>{
-          console.log(data)
+          // console.log(data)
           return findProductByFiltersSuccess({payload: data})
         }),
         catchError((error: any)=>{
@@ -68,13 +68,16 @@ export class ProductService{
   }
 
   findProductByIdServices(productId: any){
-    const headers = this.getHeaders(); //if this name is change it won't work
-    return this.httpClient.get(`${this.API_BASE_URL}/product`,{headers})
+   // console.log("Product ID: "+ productId);
+    console.log(this.API_BASE_URL + "/id/" + productId);
+    return this.httpClient.get(this.API_BASE_URL + "/id/" + productId)
       .pipe(
-        map((data: any)=>{
-          return findProductByIdSuccess({payload: data})
+        map((item: any)=>{
+          console.log(item)
+          return findProductByIdSuccess({payload: item})
         }),
         catchError((error: any)=>{
+          // console.log(error)
           return of(findProductByIdFailure(
             error.response && error.response.data.message ? error.response.data.message : error.message
           ));

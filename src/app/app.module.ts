@@ -37,8 +37,8 @@ import {orderReducer} from "./State/Order/order.reducer";
         HttpClientModule,
 
         StoreModule.forRoot({
-          auth:authReducer,
           user: userReducer,
+          auth:authReducer,
           product: productReducer,
           cart: cartReducer,
           order: orderReducer

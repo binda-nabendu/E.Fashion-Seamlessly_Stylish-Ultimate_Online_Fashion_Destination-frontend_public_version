@@ -13,33 +13,37 @@
   <div class="col-span-1 lg:col-span-7">
     <div class=" border border-gray-300 rounded-md  shadow-md shadow-gray-400 p-5">
       <form [formGroup]="orderWithAddressSubmitForm" (ngSubmit)="handlePlaceOrder()">
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div class="col-span-1">
-            <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-            <input type="text" id="firstName" formControlName="firstName" autocomplete="given-name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <div class="grid gap-3 grid-cols-2">
+          <div class="sm:col-span-1 col-span-2">
+            <label for="firstName" class="block text-sm font-medium text-gray-700">First Name <span class="text-red-600">{{checkIsRequired("firstName")?"*" : ""}}</span></label>
+            <input type="text" id="firstName" formControlName="firstName" autocomplete="given-name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" >
           </div>
-          <div class="col-span-1">
-            <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+          <div class="sm:col-span-1 col-span-2">
+            <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name <span class="text-red-600">{{checkIsRequired("lastName")?"*" : ""}}</span></label>
             <input type="text" id="lastName" formControlName="lastName" autocomplete="family-name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           </div>
-          <div class="col-span-2">
-            <label for="streetAddress" class="block text-sm font-medium text-gray-700">Full Address</label>
-            <input type="text" id="streetAddress" formControlName="streetAddress" autocomplete="street-address" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <div class="sm:col-span-1 col-span-2">
+            <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile <span class="text-red-600">{{checkIsRequired("mobile")?"*" : ""}}</span></label>
+            <input type="text" id="mobile" formControlName="mobile" autocomplete="mobile" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           </div>
-          <div class="col-span-1">
-            <label for="upozila" class="block text-sm font-medium text-gray-700">Upozila</label>
-            <input type="text" id="upozila" formControlName="upozila" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-          </div>
-          <div class="col-span-1">
-            <label for="postalCode" class="block text-sm font-medium text-gray-700">Postal Code</label>
-            <input type="text" id="postalCode" formControlName="postal_Code" autocomplete="postal-code" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <div class="sm:col-span-1 col-span-2">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-600">{{checkIsRequired("email")?"*" : ""}}</span></label>
+            <input type="text" id="email" formControlName="email" autocomplete="email" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           </div>
           <div class="col-span-2">
-            <label for="district" class="block text-sm font-medium text-gray-700">District</label>
-            <input type="text" id="district" formControlName="District" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <label for="address" class="block text-sm font-medium text-gray-700">Full Address <span class="text-red-600">{{checkIsRequired("address")?"*" : ""}}</span></label>
+            <input type="text" id="address" formControlName="address" autocomplete="address" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div class="sm:col-span-1 col-span-2">
+            <label for="postCode" class="block text-sm font-medium text-gray-700">Postal Code <span class="text-red-600">{{checkIsRequired("postCode")?"*" : ""}}</span></label>
+            <input type="text" id="postCode" formControlName="postCode" autocomplete="post-code" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div class="sm:col-span-1 col-span-2">
+            <label for="district" class="block text-sm font-medium text-gray-700">District <span class="text-red-600">{{checkIsRequired("district")?"*" : ""}}</span></label>
+            <input type="text" id="district" formControlName="district" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           </div>
           <div class="col-span-2">
-            <button type="submit" (click)="navigateToPlaceOrder()" class="w-full text-lg p-3 bg-green-500 hover:bg-green-600">Place Order</button>
+            <button type="submit" class="w-full text-lg p-3 bg-green-500 hover:bg-green-600">Place Order</button>
           </div>
         </div>
       </form>

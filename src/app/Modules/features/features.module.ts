@@ -64,11 +64,12 @@ import { OrderStatusScaleComponent } from './Components/order-status-scale/order
     MatRadioButton,
     FormsModule,
     ReactiveFormsModule,
+
   ],
   exports:[
     FeatureComponent,
     HomeComponent,
-    ProductWithFilterComponent
+    ProductWithFilterComponent,
   ]
 
 })

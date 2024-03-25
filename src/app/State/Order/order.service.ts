@@ -10,9 +10,12 @@ import {
   getOrderByIdSuccess, getOrderHistoryFailure, getOrderHistoryRequest,
   getOrderHistorySuccess
 } from "./order.action";
-
+import {Injectable} from "@angular/core";
+@Injectable({ //if I did not inject it won't work
+  providedIn: "root",
+})
 export class OrderService{
-  API_BASE_URL = BASE_API_URL + '/api/order';
+  API_BASE_URL = BASE_API_URL + '/api/user/order';
   constructor(private httpClient: HttpClient, private router: Router,
               private activeRoure: ActivatedRoute, private store: Store) {
 
@@ -24,8 +27,8 @@ export class OrderService{
     });
   }
   createOrder (reqData: any) {
-    console. log('create order', reqData);
-    const url = this.API_BASE_URL  ;
+    // console. log('create order', reqData);
+    const url = this.API_BASE_URL +"/";
     return this.httpClient.post(url, reqData, { headers:this.getHttpHeadersWithJWT()})
     .pipe(
       map ((data: any) => {
@@ -35,10 +38,11 @@ export class OrderService{
           queryParams: {step: '3', order_id: data.id},
         });
       }
-      console. log('created order -', data); return createOrderSuccess({order: data});
+      // console. log('created order -', data);
+      return createOrderSuccess({order: data});
     }) ,
     catchError((error: any) => {
-      console.log('catch error:', error);
+      console.log('catch error to create order:', error);
       return of(createOrderFailure(error.response && error.response.data.message
         ? error.response.data.message : error.message))
     })
@@ -49,9 +53,11 @@ export class OrderService{
     return this.httpClient.get(`${this.API_BASE_URL}/${orderId}`,{headers})
       .pipe(
         map((data: any)=>{
+          // console.log("get order by id: ",data)
           return getOrderByIdSuccess({order: data})
         }),
         catchError((error: any)=>{
+          console.log("get order by id error: ",error)
           return of(getOrderByIdFailure(
             error.response && error.response.data.message ? error.response.data.message : error.message
           ));
