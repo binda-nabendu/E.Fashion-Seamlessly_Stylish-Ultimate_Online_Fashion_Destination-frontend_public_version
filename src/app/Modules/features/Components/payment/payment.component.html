@@ -12,21 +12,22 @@
           </div>
         </div>
       </div>
-      <section class="col-span-1 px-5 sticky top=0 h-[100vh] mt-5">
+      <section class="col-span-1 sticky top=0 h-[100vh]">
         <ng-container>
           <div class="box rounded-md">
             <p class="text-amber-500 text-2xl pb-4">Price Details</p>
             <mat-divider></mat-divider>
-            <div class="space-y-3">
+            <div class="space-y-1">
               <div class="flex justify-between pt-3">
                 <span>Total Price</span>
                 <span>{{products.totalPrice}}</span>
               </div>
               <div class="flex justify-between pt-3">
                 <span>Discount</span>
-                <span class="text-gray-600">-{{ products.discount }}</span>
-              </div>
-              <div class="flex justify-between pt-3">
+                <span class="text-gray-600 ">{{ products.discount }}</span>
+              </div><div class="flex justify-between pt-3">
+            </div>
+              <div class="flex justify-between pt-1">
                 <span>Delivery Charge</span>
                 <span>0</span>
               </div>
@@ -35,7 +36,11 @@
                 <span>Amount Total</span>
                 <span>{{ products.totalDiscountedPrice }}</span>
               </div>
-              <button  class="text-lg p-3 w-full bg-green-500 hover:bg-green-600">CHECKOUT</button>
+              <div class="flex justify-between font-bold pt-3">
+                <span class="font-bold">Delivery Method</span>
+                <span class="text-red-600 font-bold">*Cash On Delivery</span>
+              </div>
+              <button (click)="proceedToCheckout()" class="text-lg p-3 w-full bg-green-500 hover:bg-green-600">CHECKOUT</button>
             </div>
           </div>
         </ng-container>

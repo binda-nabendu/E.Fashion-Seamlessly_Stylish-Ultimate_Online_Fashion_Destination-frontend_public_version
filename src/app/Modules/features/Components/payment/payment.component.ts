@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {select, Store} from "@ngrx/store";
 import {OrderService} from "../../../../State/Order/order.service";
 import {AppState} from "../../../../Models/AppState";
+import {FinanceService} from "../../../../State/Finence/finence.service";
 
 @Component({
   selector: 'app-payment',
@@ -12,7 +13,7 @@ import {AppState} from "../../../../Models/AppState";
 export class PaymentComponent {
   products: any;
   constructor(private activeRoute: ActivatedRoute, private store: Store<AppState>,
-              private orderService: OrderService) {
+              private orderService: OrderService, private financeService: FinanceService) {
   }
   ngOnInit(){
     let id = this.activeRoute.snapshot.paramMap.get("id");
@@ -27,4 +28,7 @@ export class PaymentComponent {
     })
   }
 
+  proceedToCheckout() {
+    this.financeService.precedePaymentService(this.products.id);
+  }
 }
