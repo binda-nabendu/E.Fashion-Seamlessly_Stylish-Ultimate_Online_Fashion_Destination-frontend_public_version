@@ -81,6 +81,7 @@ export class ProductWithFilterComponent {
         sort: sort ? sort : 'price_low',
         stock: stock ? stock : null,
       }
+      console.log(this.category);
       this.productService.findProductByFilterService(reqData);
     })
     this.store.pipe(select((store: AppState)=>store.product)).subscribe((product)=>{
