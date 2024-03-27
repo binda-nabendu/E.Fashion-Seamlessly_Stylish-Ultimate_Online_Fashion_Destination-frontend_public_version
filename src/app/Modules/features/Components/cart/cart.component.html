@@ -8,9 +8,12 @@
             <mat-divider *ngIf="!lastItem"></mat-divider>
           </div>
         </ng-container>
+        <div *ngIf="cart_item.length < 1" class="w-full">
+          <h3 class="w-full text-center text-red-600">No Item</h3>
+        </div>
       </div>
     </section>
-    <section class="col-span-2 px-5 sticky top=0 h-[100vh] mt-5">
+    <section class="col-span-2 px-5 sticky top=0 h-[100vh] ">
       <ng-container *ngIf="cart_item">
         <div class="box rounded-md">
           <p class="text-amber-500 text-2xl pb-4">Price Details</p>
@@ -18,20 +21,20 @@
           <div class="space-y-3">
             <div class="flex justify-between pt-3">
               <span>Total Price</span>
-              <span>4000</span>
+              <span>৳{{totalPrice}}</span>
             </div>
             <div class="flex justify-between pt-3">
               <span>Discount</span>
-              <span class="text-gray-600">-1000</span>
+              <span class="text-gray-600">-{{totalPrice - discountPrice}}</span>
             </div>
             <div class="flex justify-between pt-3">
               <span>Delivery Charge</span>
-              <span>50</span>
+              <span>৳ 0</span>
             </div>
             <mat-divider></mat-divider>
             <div class="flex justify-between font-bold pt-3">
               <span>Amount Total</span>
-              <span>4050</span>
+              <span>৳ {{ discountPrice }}</span>
             </div>
             <button (click)="goToCheckout()" class="text-lg p-3 w-full bg-green-500 hover:bg-green-600">CHECKOUT</button>
           </div>
