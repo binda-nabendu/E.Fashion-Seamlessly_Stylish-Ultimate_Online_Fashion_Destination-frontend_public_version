@@ -1,3 +1,4 @@
+# Note: It is the base version To get the advanced version with all functionality and customization you can contact me. On the footer note, I give my information.
 # Eccomarce Handicraft Frontend
 
 This is the frontend repository for the Eccomarce Handicraft project. It's built using Angular for the frontend logic and UI.
