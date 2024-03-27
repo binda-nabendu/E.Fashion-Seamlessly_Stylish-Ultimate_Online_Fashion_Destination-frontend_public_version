@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Route, Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {OrderService} from "../../../../../State/Order/order.service";
+import {last} from "rxjs";
 
 @Component({
   selector: 'app-address',
@@ -10,10 +11,11 @@ import {OrderService} from "../../../../../State/Order/order.service";
   styleUrls: ['./address.component.css']
 })
 export class AddressComponent {
+  addressId: any;
   constructor(private formBuilder : FormBuilder, private router: Router,
               private orderService: OrderService,private matSnackBar : MatSnackBar) {
   }
-  addresses: any;
+  @Input() addresses: any;
   orderWithAddressSubmitForm: FormGroup=this.formBuilder.group({
     firstName:["", Validators.required],
     lastName:["", Validators.required],
@@ -22,13 +24,26 @@ export class AddressComponent {
     address:["", Validators.required],
     postCode:[""],
     district:["", Validators.required],
-
   });
   ngOnInit(){
-    this.addresses = [1,1,1]
+    console.log("from address component: " + this.addresses);
   }
 
   useLocation(item: any) {
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('firstName').setValue(item.firstName);
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('lastName').setValue(item.lastName);
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('mobile').setValue(item.mobile);
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('address').setValue(item.address);
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('postCode').setValue(item.postCode ? item.postCode : "");
+    // // @ts-ignore
+    // this.orderWithAddressSubmitForm.get('district').setValue(item.district);
+
+    this.orderService.createOrder(item);
 
   }
 

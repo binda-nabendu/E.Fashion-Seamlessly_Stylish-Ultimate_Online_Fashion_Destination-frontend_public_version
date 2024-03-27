@@ -49,6 +49,7 @@ export class CartService{
     return this.httpClient.put(url, reqData, {headers})
       .pipe(
         map((data:any) => {
+          console.log("new data", data)
           return addItemToCartSuccess({payload: data});
         }),
         catchError((error: any)=>{
@@ -58,15 +59,20 @@ export class CartService{
       )
       .subscribe((action)=>this.store.dispatch(action));
   }
-  removeCartItemService () {
-    const url = this.API_BASE_URL+"/api/cart/remove-item"
+  removeCartItemService (data: any){
+    const url = this.API_BASE_URL+"/delete"
     const headers = this.getHttpHeadersWithJWT();
-    return this.httpClient.delete(url, {headers})
+    return this.httpClient.delete(url,{
+      headers: headers,
+      body: data
+    })
       .pipe(
-        map((id:any) => {
-          return removeCartItemSuccess({cartItemId: id});
+        map((data:any) => {
+          console.log("delete request", data)
+          return removeCartItemSuccess({payload: data.cartItems});
         }),
         catchError((error: any)=>{
+          console.log("cart item delete error id: ", error)
           return of(removeCartItemFailure(
             error.response && error.response.data.message
               ? error.response.data.message : error.message ))
@@ -75,13 +81,13 @@ export class CartService{
       .subscribe((action)=>this.store.dispatch(action));
   }
 
-  updateCartItemService(data: any){
-    const url = this.API_BASE_URL+"/api/cart/update-item"
+   updateCartItemService(data: any){
+    const url = this.API_BASE_URL+"/update"
     const headers = this.getHttpHeadersWithJWT();
     return this.httpClient.put(url,data, {headers})
       .pipe(
-        map((gotData:any) => {
-          return updateCartItemSuccess({payload: gotData});
+        map((getData:any) => {
+          return updateCartItemSuccess({payload: getData.cartItems});
         }),
         catchError((error: any)=>{
           return of(updateCartItemFailure(

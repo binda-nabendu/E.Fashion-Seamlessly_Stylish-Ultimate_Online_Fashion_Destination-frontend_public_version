@@ -31,20 +31,21 @@ export const cartReducer = createReducer(
   })),
   on(addItemToCartSuccess, (state, action) => ({
     ...state, loading: false,
-    cartItems: [...state.cartItems, action.payload],//exiting cart items + new cart items
+    cartItems: action.payload.cartItems,//exiting cart items + new cart items
   })),
   on(getCartSuccess, (state, action) => ({
     ...state, loading: false,
     cartItems: action.payload.cartItems,
     cart: action.payload,
   })),
-  on(removeCartItemSuccess, (state, action) => ({
+  on(removeCartItemSuccess, (state, {payload}) => ({
     ...state, loading: false,
-    cartItems: state.cartItems.filter((item)=> item.id != action.cartItemId)
+    // cartItems: state.cartItems.filter((item)=> item.id !== cartItemId)
+    cartItems: payload
   })),
   on(updateCartItemSuccess, (state, action) => ({
     ...state, loading: false,
-    cartItems: state.cartItems.map((item)=> {item.id == action.payload.id ? action.payload : item})
+    cartItems: action.payload
   })),
   on (addItemToCartFailure, getCartFailure, removeCartItemFailure, updateCartItemFailure, (state, action) => ({
     ...state, loading: false, error: action.error,

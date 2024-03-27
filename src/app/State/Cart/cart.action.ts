@@ -29,7 +29,7 @@ export const removeCartItemRequest = createAction(
 
 export const removeCartItemSuccess = createAction(
   '[Cart] Remove Cart Item Success',
-  props<{cartItemId: any}>()
+  props<{payload: any}>()
 )
 
 export const removeCartItemFailure = createAction(
