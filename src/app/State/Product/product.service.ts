@@ -52,8 +52,8 @@ export class ProductService{
       .set('pageNumber', pageNumber)
       .set('pageSize', pageSize);
 
-    const headers = this.getHeaders(); //if this name is change it won't work
-    return this.httpClient.get(`${this.API_BASE_URL}/`,{headers, params})
+    // const headers = this.getHeaders(); //if this name is change it won't work
+    return this.httpClient.get(`${this.API_BASE_URL}/`,{params})
       .pipe(
         map((data: any)=>{
           // console.log(data)
