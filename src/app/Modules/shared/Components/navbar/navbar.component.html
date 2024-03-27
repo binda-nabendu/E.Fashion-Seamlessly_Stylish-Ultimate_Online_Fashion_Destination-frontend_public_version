@@ -1,37 +1,41 @@
-<div  class=" h-16">
+<div  class=" h-[6.7rem]">
 <!--actually this will escape to height 16-->
 </div>
-<div class="fixed top-0 left-0 right-0 z-50 bg-[#FFA23A] text-[#ffffff]">
-  <div class="h-16 flex items-center justify-between px-5 lg:px-15">
+<div class="fixed top-0 left-0 right-0 z-50 h-16 text-gray-700 flex items-center justify-center bg-white">
+  <div  routerLink="/" class="flex items-center w-full gap-3">
+    <div>
+      <img src="assets/favicon.png" class="w-[10rem] cursor-pointer" alt="Hand Craft">
+    </div>
+<!--    <div class="h-full">-->
+<!--      <span class="h-full items-center text-lg m-0">My Shop</span>-->
+<!--    </div>-->
+  </div>
+  <div class = "flex items-center gap-3">
+    <button (click)="goToOn('cart')" mat-icon-button><mat-icon>shopping_cart</mat-icon></button>
+    <button *ngIf="!userProfile" (click)="login('')" mat-raised-button><mat-icon>account_circle</mat-icon>Login</button>
+    <div *ngIf="userProfile" class="flex items-center">
       <div class="flex items-center">
-          <div>
-              <img ngSrc="assets/favicon.png" class ="w-8" alt = "Hand Craft" height="512" width="512">
-              <!-- never use src use ngSrc-->
-          </div>
-          <div class="">
-              <div class="flex space-x-4 m-3 items-center">
-                  <a routerLink="/" class="text-[#ffffff] font-semibold text-lg" >My Shop</a>
-                  <button class="navbar-main-button" style="color: #ffffff" (click)="goToSelectCollection('man')" mat-button>Man</button>
-                  <button class="navbar-main-button" style="color: #ffffff"  (click)="goToSelectCollection('woman')" mat-button>woman</button>
-                  <button class="navbar-main-button" style="color: #ffffff"  (click)="goToSelectCollection('style')" mat-button>style</button>
-              </div>
-          </div>
+        <span class="text-gray-600">{{userProfile.firstName}}</span>
+        <button mat-button [matMenuTriggerFor]="userMenu">
+          <img class = "w-8" src="https://www.primianotucci.com/static/images/avatar-12df3081.png" alt="user-avatar">
+        </button>
+        <mat-menu #userMenu="matMenu">
+          <button mat-menu-item (click)="goToOn('')">Profile</button>
+          <button mat-menu-item (click)="goToOn('account/orders')">Order</button>
+          <button mat-menu-item (click)="logout('')">Logout</button>
+        </mat-menu>
       </div>
-      <div class = "flex items-center">
-          <button (click)="goToOn('cart')" mat-icon-button><mat-icon>shopping_cart</mat-icon></button>
-          <button *ngIf="!userProfile" (click)="login('')" mat-raised-button><mat-icon>account_circle</mat-icon>Login </button>
-          <div *ngIf="userProfile" class="ml-3 flex items-center">
-              <div class="flex items-center space-x-5">
-                  <span class="text-amber-100">{{userProfile.firstName}}</span>
-                  <button mat-button [matMenuTriggerFor]="userMenu">
-                      <img class = "w-8" src="https://www.primianotucci.com/static/images/avatar-12df3081.png" alt="user-avatar">
-                  </button>
-                  <mat-menu #userMenu="matMenu">
-                      <button mat-menu-item (click)="goToOn('')">Profile</button>
-                      <button mat-menu-item (click)="goToOn('account/orders')">Order</button>
-                      <button mat-menu-item (click)="logout('')">Logout</button>
-                  </mat-menu>
-              </div>
+
+    </div>
+  </div>
+</div>
+<div class="fixed top-16 w-full z-50 bg-gray-100">
+  <div class="h-11 w-full flex items-center justify-between lg:px-15 border-b border-gray-300">
+      <div class="flex items-center justify-center h-full w-full">
+          <div class="flex h-full items-center">
+                <button *ngFor="let menu of menuItem"
+                        class="navbar-main-button h-full text-m text-gray-600 px-5 hover:bg-gray-100"
+                        (click)="goToSelectCollection(menu.id)">{{menu.name}}</button>
 
           </div>
       </div>

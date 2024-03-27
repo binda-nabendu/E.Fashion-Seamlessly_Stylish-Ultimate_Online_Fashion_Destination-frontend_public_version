@@ -6,6 +6,7 @@ import {UserService} from "../../../../State/User/user.service";
 import {select, Store} from "@ngrx/store";
 import {AppState} from "../../../../Models/AppState";
 import {userProfileActionLogout} from "../../../../State/User/user.action";
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-navbar',
@@ -16,11 +17,28 @@ export class NavbarComponent {
   currentSection: any;
   isNavBarContentOpen: boolean = false;
   userProfile: any = false;
-  constructor(private router: Router, private matDialog: MatDialog, private userService: UserService, private store: Store<AppState>) {
+  isSmallScreen = true;
+  menuItem = [
+    {
+      name: 'Man',
+      id: 'man'
+    },
+    {
+      name: 'Woman',
+      id: 'woman'
+    },
+    {
+      name: 'Style',
+      id: 'style'
+    }
+  ]
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private matDialog: MatDialog, private userService: UserService, private store: Store<AppState>) {
   }
   ngOnInit(){
-    if(localStorage.getItem("jwt"))
+    if(localStorage.getItem("jwt") != null) {
+      console.log("jwt found: ", localStorage.getItem("jwt"));
       this.userService.getUserProfileService()
+    }
 
     this.store.pipe(select((store) => store.user)).subscribe((user) =>{
       this.userProfile = user.userProfile;
@@ -28,6 +46,10 @@ export class NavbarComponent {
         this.matDialog.closeAll();
       }
     })
+    // Listen for screen size changes
+    this.breakpointObserver.observe([Breakpoints.Small]).subscribe(state => {
+      this.isSmallScreen = state.matches;
+    });
 
   }
   goToSelectCollection(section: string){

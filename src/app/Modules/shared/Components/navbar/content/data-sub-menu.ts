@@ -19,11 +19,10 @@ export const navigation_data = {
     sections: [
       {
         id: 'clothing',
-        name:'Clothing',
+        name:'Woman\'s Clothing',
         items:[
-          {name: 'Tops', id:'top', href:`{woman/clothing/tops}`},
+          {name: 'Tops', id:'women_dress', href:`{woman/clothing/tops}`},
           {name: 'Dresses', id:"Dress", href:`#`},
-          {name: 'Pants', id:"women_jeans"},
 
         ]
       },
@@ -31,10 +30,8 @@ export const navigation_data = {
         id: 'accessories',
         name: 'Accessories',
         items:[
-          {name: 'Watches', id: 'watch'},
-          {name: 'Wallets', id: 'wallet'},
-          {name: 'Bags', id: 'bag'},
-          {name: 'Sunglasses', id: 'sunglasse'}
+          {name: 'Wallets(Coming Soon)', id: 'wallet'},
+          {name: 'Bags(Coming Soon)', id: 'bag'}
         ]
       }
     ]
@@ -59,11 +56,40 @@ export const navigation_data = {
     sections: [
       {
         id: 'clothing',
-        name:'Clothing',
+        name:'Man\'s Clothing',
         items:[
-          {name: 'Tops', id:"top", href:`{woman/clothing/tops}`},
-          {name: 'Dresses', id:"Dress", href:`#`},
-          {name: 'Pants', id:"women_jeans"},
+          {name: 'Kurta', id:"mens_kurta", href:`{man/clothing/panjabi}`},
+          {name: 'Shirt', id:"shirt", href:`#`},
+          {name: 'Jeans', id:"men_jeans"},
+
+        ]
+      }
+    ]
+  },
+  style: {
+    id: 'style',
+    name: 'Style',
+    featured: [
+      {
+        name: 'new Arrivals',
+        href: '/',
+        imageSrc: 'https://lllll',
+        imageAlt: 'info'
+      },
+      {
+        name: 'Basic Tees',
+        href: '/',
+        imageSrc: 'https://lllll',
+        imageAlt: 'Close up of Basic Tee fall bundle with off-white,...'
+      }
+    ],
+    sections: [
+      {
+        id: 'style',
+        name:'Style\'s',
+        items:[
+          {name: 'Occasion Special', id:"occasion_special", href:`#`},
+          {name: 'Party Special', id:"party-special", href:`#`}
 
         ]
       }
