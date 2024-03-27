@@ -18,7 +18,8 @@ export class AppComponent {
       this.userService.getUserProfileService();
 
     this.store.pipe(select((store) => store.auth)).subscribe((user) =>{
-      this.userService.getUserProfileService();
+      if(localStorage.getItem("jwt"))
+        this.userService.getUserProfileService();
       console.log("store data: " + this.store)
     })
 

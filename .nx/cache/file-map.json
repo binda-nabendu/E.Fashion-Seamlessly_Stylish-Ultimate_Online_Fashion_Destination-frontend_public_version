@@ -132,19 +132,19 @@
         },
         {
           "file": "src/Data/Men/men_jeans.ts",
-          "hash": "2856682934015970130"
+          "hash": "11493771494537121705"
         },
         {
           "file": "src/Data/Men/men_kurtts.ts",
-          "hash": "5904076414777224866"
+          "hash": "691452268922582656"
         },
         {
           "file": "src/Data/Men/men_shirt.json",
-          "hash": "1045534155761335478"
+          "hash": "16498472690788649821"
         },
         {
           "file": "src/Data/Saree/lenghaCholiPage2.js",
-          "hash": "13604149678890292405"
+          "hash": "3447237888781520655"
         },
         {
           "file": "src/Data/Saree/page1.ts",
@@ -164,7 +164,7 @@
         },
         {
           "file": "src/Data/Women/women_dress.json",
-          "hash": "2330215861009108318"
+          "hash": "12046651314863853868"
         },
         {
           "file": "src/Data/Women/women_jeans.json",
@@ -176,7 +176,7 @@
         },
         {
           "file": "src/Data/dress/page1.js",
-          "hash": "7758858730846744061"
+          "hash": "1534336509118319259"
         },
         {
           "file": "src/Data/mainCarousel.ts",
@@ -208,7 +208,7 @@
         },
         {
           "file": "src/app/Models/AppState.ts",
-          "hash": "14731136148075962928"
+          "hash": "7071305239063091537"
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.css",
@@ -444,7 +444,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/cart/cart.component.html",
-          "hash": "5387211680137179031"
+          "hash": "9614407979824586600"
         },
         {
           "file": "src/app/Modules/features/Components/cart/cart.component.spec.ts",
@@ -455,10 +455,11 @@
         },
         {
           "file": "src/app/Modules/features/Components/cart/cart.component.ts",
-          "hash": "8714961555327136229",
+          "hash": "726593516154815640",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -467,7 +468,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/checkout/address/address.component.html",
-          "hash": "5154903220032097573"
+          "hash": "2165688145519286226"
         },
         {
           "file": "src/app/Modules/features/Components/checkout/address/address.component.spec.ts",
@@ -478,11 +479,13 @@
         },
         {
           "file": "src/app/Modules/features/Components/checkout/address/address.component.ts",
-          "hash": "8672827511154738572",
+          "hash": "7963000422896892222",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/forms",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@angular/material",
+            "npm:rxjs"
           ]
         },
         {
@@ -491,7 +494,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/checkout/checkout.component.html",
-          "hash": "4646732655289467091"
+          "hash": "12276567254510845390"
         },
         {
           "file": "src/app/Modules/features/Components/checkout/checkout.component.spec.ts",
@@ -502,9 +505,10 @@
         },
         {
           "file": "src/app/Modules/features/Components/checkout/checkout.component.ts",
-          "hash": "16781181706454885736",
+          "hash": "146444088076571978",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -531,7 +535,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.html",
-          "hash": "6438834820439241645"
+          "hash": "1725229540650036194"
         },
         {
           "file": "src/app/Modules/features/Components/home/home-product-card/home-product-card.component.scss",
@@ -553,7 +557,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.html",
-          "hash": "2757366451298538170"
+          "hash": "1433532251264592229"
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.scss",
@@ -568,14 +572,15 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.ts",
-          "hash": "11822495674449848299",
+          "hash": "4286342523413330002",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.html",
-          "hash": "4933051401073889583"
+          "hash": "9373105654306095529"
         },
         {
           "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.scss",
@@ -712,7 +717,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/payment/payment.component.html",
-          "hash": "578823561848183894"
+          "hash": "17435595480048761938"
         },
         {
           "file": "src/app/Modules/features/Components/payment/payment.component.spec.ts",
@@ -723,9 +728,11 @@
         },
         {
           "file": "src/app/Modules/features/Components/payment/payment.component.ts",
-          "hash": "3887294541848597944",
+          "hash": "10711586885639775520",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@ngrx/store"
           ]
         },
         {
@@ -757,7 +764,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.html",
-          "hash": "10256041982242414355"
+          "hash": "3197038361885224792"
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.spec.ts",
@@ -768,12 +775,12 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-details/product-details.component.ts",
-          "hash": "12540013752352977902",
+          "hash": "10726040671699212482",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
-            "npm:tailwindcss",
-            "npm:@ngrx/store"
+            "npm:@ngrx/store",
+            "npm:@angular/material"
           ]
         },
         {
@@ -819,7 +826,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.ts",
-          "hash": "15202384690982227931",
+          "hash": "14529881051799981571",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -828,7 +835,7 @@
         },
         {
           "file": "src/app/Modules/features/features.module.ts",
-          "hash": "4231847843969857543",
+          "hash": "18361776621716294697",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -842,7 +849,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/address-card/address-card.component.html",
-          "hash": "176512687323809020"
+          "hash": "5190236286188434516"
         },
         {
           "file": "src/app/Modules/shared/Components/address-card/address-card.component.spec.ts",
@@ -864,7 +871,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.html",
-          "hash": "15637172332409598213"
+          "hash": "11447654584526392705"
         },
         {
           "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.spec.ts",
@@ -875,7 +882,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/cart-item/cart-item.component.ts",
-          "hash": "7326857558133280175",
+          "hash": "1274320513020043421",
           "deps": [
             "npm:@angular/core"
           ]
@@ -886,7 +893,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/footer/footer.component.html",
-          "hash": "16714883381731480612"
+          "hash": "5713069787901326441"
         },
         {
           "file": "src/app/Modules/shared/Components/footer/footer.component.spec.ts",
@@ -927,7 +934,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/content/data-sub-menu.ts",
-          "hash": "13758484501766268086"
+          "hash": "15401982723708204822"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.css",
@@ -935,7 +942,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.html",
-          "hash": "10080952370237397864"
+          "hash": "998471253082161651"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.spec.ts",
@@ -946,21 +953,22 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.ts",
-          "hash": "15584011394044105336",
+          "hash": "15848378659201952284",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
             "npm:@angular/material",
-            "npm:@ngrx/store"
+            "npm:@ngrx/store",
+            "npm:@angular/cdk"
           ]
         },
         {
           "file": "src/app/Modules/shared/Components/product-card/product-card.component.html",
-          "hash": "3553822213849232042"
+          "hash": "15918727118784505587"
         },
         {
           "file": "src/app/Modules/shared/Components/product-card/product-card.component.scss",
-          "hash": "3260110449867089472"
+          "hash": "3244421341483603138"
         },
         {
           "file": "src/app/Modules/shared/Components/product-card/product-card.component.spec.ts",
@@ -1001,7 +1009,7 @@
         },
         {
           "file": "src/app/Modules/shared/shared.module.ts",
-          "hash": "4540968685264325846",
+          "hash": "4573754589351820897",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -1036,27 +1044,53 @@
         },
         {
           "file": "src/app/State/Cart/cart.action.ts",
-          "hash": "1673073951774530010",
+          "hash": "9876007058437815767",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Cart/cart.reducer.ts",
-          "hash": "2876923778899093373",
+          "hash": "15671356382341957921",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Cart/cart.service.ts",
-          "hash": "10242875239422464374",
+          "hash": "8821030619931100799",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
             "npm:@angular/router",
             "npm:@ngrx/store",
             "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/State/Finence/finence.action.ts",
+          "hash": "4670957502394340871",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Finence/finence.reducer.ts",
+          "hash": "12984369402460444576",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "src/app/State/Finence/finence.service.ts",
+          "hash": "4648332471399458286",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:@ngrx/store",
+            "npm:rxjs",
+            "npm:@angular/material"
           ]
         },
         {
@@ -1075,12 +1109,13 @@
         },
         {
           "file": "src/app/State/Order/order.service.ts",
-          "hash": "9185323694627206060",
+          "hash": "14693501478683615335",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/router",
             "npm:@ngrx/store",
-            "npm:rxjs"
+            "npm:rxjs",
+            "npm:@angular/core"
           ]
         },
         {
@@ -1092,14 +1127,14 @@
         },
         {
           "file": "src/app/State/Product/product.reducer.ts",
-          "hash": "753098163144961040",
+          "hash": "10122291308469005304",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Product/product.service.ts",
-          "hash": "12564255239229915396",
+          "hash": "15174044119153761202",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -1124,7 +1159,7 @@
         },
         {
           "file": "src/app/State/User/user.service.ts",
-          "hash": "11449103295349263478",
+          "hash": "10771323806315831155",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -1158,7 +1193,7 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "16505488700141497457",
+          "hash": "15037466594998717791",
           "deps": [
             "npm:@angular/core",
             "npm:@ngrx/store"
@@ -1166,7 +1201,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "15952383911332301899",
+          "hash": "14725177449666964130",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",

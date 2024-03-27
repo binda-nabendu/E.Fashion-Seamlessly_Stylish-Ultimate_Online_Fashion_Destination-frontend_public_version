@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {productReducer} from "./State/Product/product.reducer";
 import {cartReducer} from "./State/Cart/cart.reducer";
 import {orderReducer} from "./State/Order/order.reducer";
+import {financeReducer} from "./State/Finence/finence.reducer";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {orderReducer} from "./State/Order/order.reducer";
           auth:authReducer,
           product: productReducer,
           cart: cartReducer,
-          order: orderReducer
+          order: orderReducer,
+          payment: financeReducer
         }, {}),
     ],
   providers: [
