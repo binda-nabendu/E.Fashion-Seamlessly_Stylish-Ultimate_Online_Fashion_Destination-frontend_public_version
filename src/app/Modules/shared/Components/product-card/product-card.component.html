@@ -1,10 +1,11 @@
-<div class="product-card w-[17rem] m-3 transition-all cursor-pointer shadow shadow-gray-400" (click)="navigateToItem('/product-details/',product.id)">
+<div class="w-[17rem] h-[31rem] cursor-pointer shadow shadow-gray-300 hover:transform hover:scale-105
+  duration-500 items-center overflow-hidden bg-white m-3" (click)="navigateToItem('/product-details/',product.id)">
 
-  <div class="h-[20rem]">
-    <img class="h-full w-full" [src]="product.imageUrl" alt="product image">
+  <div class="h-[20rem] w-full flex justify-center items-center">
+    <img class="h-full" [src]="product.imageUrl" alt="product image">
   </div>
 
-  <div class="text-part p-3 bg-amber-50">
+  <div class="p-3 h-full mt-3 bg-amber-50">
     <div>
       <p class="opacity-75">{{ product.brand}}</p>
       <p>{{ product.title}}</p>
