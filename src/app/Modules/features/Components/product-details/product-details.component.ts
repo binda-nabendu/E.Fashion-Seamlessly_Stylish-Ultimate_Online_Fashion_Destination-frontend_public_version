@@ -39,25 +39,33 @@ export class ProductDetailsComponent implements OnInit{
 
   }
   addItemToCart() {
-    if(this.product.size && this.productSize != undefined) {
-      let data = {
-        productId: Number(this.id),
-        size: this.productSize.name,
-        quantity: 1,
-        price: this.product.discountedPrice
+    if(localStorage.getItem('jwt')){
+      if (this.product.size && this.productSize != undefined) {
+        let data = {
+          productId: Number(this.id),
+          size: this.productSize.name,
+          quantity: 1,
+          price: this.product.discountedPrice
+        }
+        // console.log(this.productSize)
+        this.cartService.addItemToCartService(data);
+        this.cartService.getCartService();
+        console.log(data)
+        this.router.navigate(['cart']);
+      } else {
+        this.matSnackBar.open('select size first', 'Close', {
+          duration: 2000, // Duration in milliseconds
+          horizontalPosition: 'center', // Horizontal position: 'start', 'center', 'end', or 'left', 'right'
+          verticalPosition: 'bottom', // Vertical position: 'top' or 'bottom'
+        });
+
       }
-      // console.log(this.productSize)
-      this.cartService.addItemToCartService(data);
-      this.cartService.getCartService();
-      console.log(data)
-      this.router.navigate(['cart']);
-      }else{
-      this.matSnackBar.open('select size first', 'Close', {
+    }else{
+      this.matSnackBar.open('Please login first', 'Close', {
         duration: 2000, // Duration in milliseconds
         horizontalPosition: 'center', // Horizontal position: 'start', 'center', 'end', or 'left', 'right'
-        verticalPosition: 'bottom', // Vertical position: 'top' or 'bottom'
+        verticalPosition: 'top', // Vertical position: 'top' or 'bottom'
       });
-
     }
   }
 

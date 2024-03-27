@@ -1,5 +1,5 @@
 <div class="p-5 lg:p-10" *ngIf="product">
-  <p class="text-gray-500 pb-10">product/clothes/man/panjabi</p>
+  <p class="text-gray-500 pb-10">product-details/{{product.title}}</p>
   <section class="lg:grid grid-cols-3 lg:gap-10">
     <div class="col-span-2 flex items-center flex-col">
       <img [src]="product.imageUrl" alt="product img">
@@ -10,8 +10,8 @@
         <p class="text-xl">{{product.title}}</p>
       </div>
       <div class="flex space-x-7 items-center">
-        <p class="text-green-700 font-semibold text-lg">{{product.discountedPrice}}</p>
-        <p class="text-lg line-through text-gray-400">{{product.price}}</p>
+        <p class="text-green-700 font-semibold text-lg">৳{{product.discountedPrice}}</p>
+        <p class="text-lg line-through text-gray-400">৳ {{product.price}}</p>
 
         <p class="text-2xl lg:text-4xl text-amber-500">{{product.discountPercent}} %off</p>
       </div>
