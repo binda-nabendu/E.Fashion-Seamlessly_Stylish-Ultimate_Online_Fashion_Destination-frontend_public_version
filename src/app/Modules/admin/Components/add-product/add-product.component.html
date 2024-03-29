@@ -1,59 +1,56 @@
-<div class="product-upload p-3">
-  <div class="form-group">
-    <label for="imageUrl">Image URL:</label>
-    <input type="text" id="imageUrl" [(ngModel)]="product.imageUrl" name="imageUrl">
+<div class="product-upload p-3 lg:p-5">
+  <div class="items-center w-full">
+    <h2 class="w-full text-center py-3">Add Product</h2>
   </div>
-  <div class="form-group">
-    <label for="brand">Brand:</label>
-    <input type="text" id="brand" [(ngModel)]="product.brand" name="brand">
-  </div>
-  <div class="form-group">
-    <label for="title">Title:</label>
-    <input type="text" id="title" [(ngModel)]="product.title" name="title">
-  </div>
-  <div class="form-group">
-    <label for="color">Color:</label>
-    <input type="text" id="color" [(ngModel)]="product.color" name="color">
-  </div>
-  <div class="form-group">
-    <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="product.description" name="description"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="discountPrice">Discounted Price:</label>
-    <input type="number" id="discountPrice" [(ngModel)]="product.discountPrice" name="discountPrice">
-  </div>
-  <div class="form-group">
-    <label for="actualPrice">Actual Price:</label>
-    <input type="number" id="actualPrice" [(ngModel)]="product.actualPrice" name="actualPrice">
-  </div>
-  <div class="form-group">
-    <label for="discountPercent">Discount Percent:</label>
-    <input type="number" id="discountPercent" [(ngModel)]="product.discountPercent" name="discountPercent">
-  </div>
-  <div class="form-group">
-    <label for="size">Sizes:</label>
-    <input type="text" id="size" [(ngModel)]="size" name="size">
-    <button (click)="addSize()">Add Size</button>
-    <ul>
-      <li *ngFor="let size of product.size">{{ size.name }} ({{ size.quantity }})</li>
+
+  <div class="form-group grid grid-cols-6 gap-3 items-center">
+
+    <label for="topLabelCategory" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Main Category:</label>
+    <input type="text" id="topLabelCategory" class="col-span-4 lg:col-span-2 w-full" [(ngModel)]="product.topLabelCategory" name="topLabelCategory">
+
+    <label for="secondLabelCategory" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Sub Category:</label>
+    <input type="text" id="secondLabelCategory" class="col-span-4 lg:col-span-2 w-full" [(ngModel)]="product.secondLabelCategory" name="secondLabelCategory">
+
+    <label for="thirdLabelCategory" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Sub of Sub Category:</label>
+    <input type="text" id="thirdLabelCategory" class="col-span-4 lg:col-span-5 w-full" [(ngModel)]="product.thirdLabelCategory" name="thirdLabelCategory">
+
+    <label for="imageUrl" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Image URL:</label>
+    <input type="text" id="imageUrl" class="col-span-4 lg:col-span-5 w-full" [(ngModel)]="product.imageUrl" name="imageUrl">
+
+    <label for="brand" class="col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Brand:</label>
+    <input type="text" id="brand" class="col-span-5 lg:col-span-1 w-full" [(ngModel)]="product.brand" name="brand">
+
+    <label for="brand" class="col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Title:</label>
+    <input type="text" id="title" class="col-span-5 lg:col-span-3 w-full" [(ngModel)]="product.title" name="title">
+
+    <label for="color" class="col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Color:</label>
+    <input type="text" id="color"  class="col-span-5 lg:col-span-1 w-full" [(ngModel)]="product.color" name="color">
+
+    <div class="col-span-6 lg:col-span-4 bg-gray-300 rounded-md p-1 lg:flex gap-2 items-center h-full">
+      <label for="size" class="col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Sizes:</label>
+      <input type="text" id="size" class=""  [(ngModel)]="size" name="size">
+
+      <label for="quantity" class="col-span-1 text-gray-500 text-md font-bold">Quantity:</label>
+      <input type="number" id="quantity" class="" [(ngModel)]="product.quantity" name="quantity">
+
+      <button (click)="addSize()" class="cursor-pointer bg-gray-500 text-white rounded-md mt-1 lg:w-40 w-[100%] h-7">Add</button>
+    </div>
+    <ul class="col-span-6 flex gap-3">
+      <li *ngFor="let size of product.size">{{ size.name }}- {{ size.quantity }}</li>
     </ul>
+
+    <label for="description"  class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Description:</label>
+    <textarea id="description" class="col-span-5 lg:col-span-5 border rounded-md w-full" [(ngModel)]="product.description" name="description"></textarea>
+
+    <label for="discountPrice" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Discount Price:</label>
+    <input type="number" id="discountPrice" class="col-span-4 lg:col-span-1 w-full" [(ngModel)]="product.discountPrice" name="discountPrice">
+
+    <label for="actualPrice" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Actual Price:</label>
+    <input type="number" id="actualPrice" class="col-span-4 lg:col-span-1 w-full" [(ngModel)]="product.actualPrice" name="actualPrice">
+
+    <label for="discountPercent" class="col-span-2 lg:col-span-1 text-gray-500 text-md font-bold text-left lg:text-right">Discount Percent:</label>
+    <input type="number" id="discountPercent" class="col-span-4 lg:col-span-1 w-full" [(ngModel)]="product.discountPercent" name="discountPercent">
+
+    <button (click)="uploadProduct()"  class="col-span-5 lg:col-span-6 w-full text-lg p-3 bg-green-500 hover:bg-green-600">Upload Product</button>
   </div>
-  <div class="form-group">
-    <label for="quantity">Available Quantity:</label>
-    <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity">
-  </div>
-  <div class="form-group">
-    <label for="topLabelCategory">Top Label Category:</label>
-    <input type="text" id="topLabelCategory" [(ngModel)]="product.topLabelCategory" name="topLabelCategory">
-  </div>
-  <div class="form-group">
-    <label for="secondLabelCategory">Second Label Category:</label>
-    <input type="text" id="secondLabelCategory" [(ngModel)]="product.secondLabelCategory" name="secondLabelCategory">
-  </div>
-  <div class="form-group">
-    <label for="thirdLabelCategory">Third Label Category:</label>
-    <input type="text" id="thirdLabelCategory" [(ngModel)]="product.thirdLabelCategory" name="thirdLabelCategory">
-  </div>
-  <button (click)="uploadProduct()">Upload Product</button>
 </div>
