@@ -1,8 +1,10 @@
 <div class="flex items-center h-screen">
   <div class="h-full w-[20%] border border-r-gray-800 overflow-y-scroll hide-scrollbar">
     <span *ngFor="let item of submenu; let odd = odd" [routerLink]="item.link"
-          class="m-0 h-1/16 w-full text-lg block pl-4 text-gray-600 font-medium cursor-pointer"
-          [ngClass]="odd ? 'bg-gray-100' : 'bg-gray-300'">{{item.name}}</span>
+          class="m-0 h-6 w-full text-md block pl-4 text-gray-600 font-medium cursor-pointer"
+          [ngClass]="{'bg-gray-500': clickedItem === item ,'bg-gray-100': odd, 'text-white': clickedItem===item}"
+          (click)="clickedItem = item">{{item.name}}</span>
+
 
   </div>
   <div class="h-full w-[80%] overflow-y-scroll hide-scrollbar">

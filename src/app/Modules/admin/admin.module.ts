@@ -9,6 +9,8 @@ import { MyCustomersComponent } from './Components/my-customers/my-customers.com
 import { AddProductComponent } from './Components/add-product/add-product.component';
 import { MyOrderTableComponent } from './Components/my-order-table/my-order-table.component';
 import {FormsModule} from "@angular/forms";
+import {MatMenu, MatMenuItem, MatMenuModule} from "@angular/material/menu";
+import {MatButton, MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -21,10 +23,13 @@ import {FormsModule} from "@angular/forms";
        AddProductComponent,
        MyOrderTableComponent
   ],
-    imports: [
-        CommonModule,
-        AdminRoutingModule,
-        FormsModule
-    ]
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    FormsModule,
+    MatMenuModule,
+    MatMenuItem,
+    MatButtonModule,
+  ]
 })
 export class AdminModule { }

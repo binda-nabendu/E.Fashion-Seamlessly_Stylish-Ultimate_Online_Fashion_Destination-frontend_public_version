@@ -1,1 +1,36 @@
-<p>my-order-table works!</p>
+<div class="orders-container p-2 lg: 5">
+  <div class="bg-gray-100">
+    <h2 class="text-center text-gray-800 font-bold">All Orders</h2>
+  </div>
+  <div class="order-list">
+    <div *ngFor="let order of orders" class="order">
+      <h2>Order ID: {{ order.id }}</h2>
+      <p class=""><strong>Order By: </strong> <span class="text-green-500"> {{ order.user.firstName }} {{ order.user.lastName }}</span></p>
+      <p><strong>Total Price:</strong> ৳{{ order.totalPrice }}</p>
+      <p><strong>Total Discounted Price:</strong> ৳{{ order.totalDiscountedPrice }}</p>
+      <div class="flex items-center gap-3 h-full pb-3">
+        <span class="h-full"><strong>Order Status:</strong> {{ order.orderStatus }}</span>
+        <button mat-button [matMenuTriggerFor]="orderStatus" style="background:  #d6dbdf" class="px-2 py-1 h-full rounded-md">Change Status</button>
+        <mat-menu #orderStatus="matMenu">
+          <button mat-menu-item (click)="changeStatus(order, 'PLACED')">PLACED</button>
+          <button mat-menu-item (click)="changeStatus(order, 'CONFIRMED')">CONFIRMED</button>
+          <button mat-menu-item (click)="changeStatus(order, 'CANCELED')">CANCELED</button>
+          <button mat-menu-item (click)="changeStatus(order, 'SHIPPED')">SHIPPED</button>
+          <button mat-menu-item (click)="changeStatus(order, 'DELIVERED')">DELIVERED</button>
+        </mat-menu>
+      </div>
+      <p><strong>Order Date:</strong> {{ order.orderDate | date: 'medium' }}</p>
+      <p><strong>Receive By: </strong> <span class="text-lg font-semibold text-green-600">{{order.shippingAddress.firstName +" "+order.shippingAddress.lastName}}</span>, Phone: {{order.shippingAddress.mobile}}</p>
+      <p><strong>Shipping Address:</strong> {{ order.shippingAddress.address }} {{order.shippingAddress.postCode ? "," + order.shippingAddress.postCode : ""}}</p>
+      <div class="flex items-center gap-3 h-full pb-3">
+        <span class="h-full"><strong>Payment Status:</strong> {{ order.paymentDetails.status }}</span>
+        <button mat-button [matMenuTriggerFor]="paymentStatus" style="background:  #d0ece7" class="px-2 py-1 h-full rounded-md">Change Status</button>
+        <mat-menu #paymentStatus="matMenu">
+          <button mat-menu-item (click)="changeStatus(order, 'PENDING')">PENDING</button>
+          <button mat-menu-item (click)="changeStatus(order, 'DONE')">DONE</button>
+        </mat-menu>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

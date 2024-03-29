@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +12,6 @@ export class AddProductComponent {
     brand: '',
     title: '',
     color: '',
-    description: '',
     discountPrice: 0,
     actualPrice: 0,
     discountPercent: 0,
@@ -19,16 +19,24 @@ export class AddProductComponent {
     quantity: 0,
     topLabelCategory: '',
     secondLabelCategory: '',
-    thirdLabelCategory: ''
+    thirdLabelCategory: '',
+    description: ''
   };
   size: string = '';
 
-  constructor() {}
+  constructor(private matSnackBar: MatSnackBar) {}
 
   addSize() {
-    if (this.size.trim() !== '') {
-      this.product.size.push({ name: this.size, quantity: 0 });
+    if (this.size.trim() !== '' && this.product.quantity >= 0) {
+      this.product.size.push({ name: this.size, quantity: this.product.quantity });
       this.size = '';
+      this.product.quantity = 0
+    }else{
+      this.matSnackBar.open('sizes or Quantity not valid', 'Close', {
+        duration: 2000, // Duration in milliseconds
+        horizontalPosition: 'center', // Horizontal position: 'start', 'center', 'end', or 'left', 'right'
+        verticalPosition: 'top', // Vertical position: 'top' or 'bottom'
+      });
     }
   }
 
