@@ -1,5 +1,5 @@
 # Note: It is the base version To get the advanced version with all functionality and customization you can contact me. On the footer note, I give my information.
-# Eccomarce Handicraft Frontend
+# Fashion: Seamlessly Stylish - Ultimate Online Fashion Destination
 
 This is the frontend repository for the Eccomarce Handicraft project. It's built using Angular for the frontend logic and UI.
 
@@ -15,7 +15,7 @@ Eccomarce Handicraft is an e-commerce platform focusing on handicraft products. 
 - View and manage cart items
 - Checkout process
 - View order history
-- ... (add more features here)
+- ... more
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ To run the project locally, follow these steps:
 
 ## Contributors
 
-- Nabendu Bikash Binda 
+- Nabendu Bikash Binda
 - Email: [binda.nabendu@gmail.com]()
 - website: [nabendu.vercel.app]()
 
