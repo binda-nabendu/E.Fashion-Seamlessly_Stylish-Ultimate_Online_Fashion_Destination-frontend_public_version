@@ -9,8 +9,13 @@ import { MyCustomersComponent } from './Components/my-customers/my-customers.com
 import { AddProductComponent } from './Components/add-product/add-product.component';
 import { MyOrderTableComponent } from './Components/my-order-table/my-order-table.component';
 import {FormsModule} from "@angular/forms";
-import {MatMenu, MatMenuItem, MatMenuModule} from "@angular/material/menu";
-import {MatButton, MatButtonModule} from "@angular/material/button";
+import {MatMenuItem, MatMenuModule} from "@angular/material/menu";
+import {MatButtonModule} from "@angular/material/button";
+import { OrderProductDetailsComponent } from './Components/order-product-details/order-product-details.component';
+import {MatDivider} from "@angular/material/divider";
+import {SharedModule} from "../shared/shared.module";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -21,7 +26,8 @@ import {MatButton, MatButtonModule} from "@angular/material/button";
        AuthorProductsComponent,
        MyCustomersComponent,
        AddProductComponent,
-       MyOrderTableComponent
+       MyOrderTableComponent,
+       OrderProductDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +36,13 @@ import {MatButton, MatButtonModule} from "@angular/material/button";
     MatMenuModule,
     MatMenuItem,
     MatButtonModule,
+    MatDivider,
+    SharedModule,
+    MatDialogModule,
+    MatInputModule
+  ],
+  exports:[
+
   ]
 })
 export class AdminModule { }

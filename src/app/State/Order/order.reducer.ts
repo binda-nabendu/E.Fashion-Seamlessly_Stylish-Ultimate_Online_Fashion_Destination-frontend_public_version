@@ -1,12 +1,33 @@
 import {createReducer, on} from "@ngrx/store";
 import {
-  confirmedOrderFailure, confirmedOrderRequest, confirmedOrderSuccess,
-  createOrderFailure, createOrderRequest, createOrderSuccess, deleteOrderFailure,
-  deleteOrderRequest, deleteOrderSuccess, deliveryOrderFailure, deliveryOrderRequest,
-  deliveryOrderSuccess, getAllOrderFailure, getAllOrderRequest, getAllOrderSuccess,
-  getOrderByIdFailure, getOrderByIdRequest, getOrderByIdSuccess, getOrderHistoryFailure,
-  getOrderHistoryRequest, getOrderHistorySuccess, placeOrderFailure, placeOrderRequest, placeOrderSuccess,
-  shipOrderFailure, shipOrderRequest, shipOrderSuccess
+  confirmedOrderFailure,
+  confirmedOrderRequest,
+  confirmedOrderSuccess,
+  createOrderFailure,
+  createOrderRequest,
+  createOrderSuccess,
+  deleteOrderFailure,
+  deleteOrderRequest,
+  deleteOrderSuccess,
+  deliveryOrderFailure,
+  deliveryOrderRequest,
+  deliveryOrderSuccess,
+  getAllOrderFailure,
+  getAllOrderRequest,
+  getAllOrderSuccess, getAllProductAssociateWithThatOrderCartFailed, getAllProductAssociateWithThatOrderCartRequest,
+  getAllProductAssociateWithThatOrderCartSuccess,
+  getOrderByIdFailure,
+  getOrderByIdRequest,
+  getOrderByIdSuccess,
+  getOrderHistoryFailure,
+  getOrderHistoryRequest,
+  getOrderHistorySuccess,
+  placeOrderFailure,
+  placeOrderRequest,
+  placeOrderSuccess,
+  shipOrderFailure,
+  shipOrderRequest,
+  shipOrderSuccess
 } from "./order.action";
 
 export interface OrderState{
@@ -26,6 +47,7 @@ const initialState: OrderState = {
 export const orderReducer = createReducer(
   initialState,
   on(createOrderRequest, getOrderByIdRequest, getOrderHistoryRequest,
+    getAllProductAssociateWithThatOrderCartRequest,
     getAllOrderRequest,confirmedOrderRequest, placeOrderRequest,
     shipOrderRequest,deliveryOrderRequest, deleteOrderRequest, (state) => ({
     ...state,
@@ -52,6 +74,10 @@ export const orderReducer = createReducer(
     loading: false,
     orders: payload
   })),
+  on(getAllProductAssociateWithThatOrderCartSuccess, (state, action) => ({
+    ...state, loading: false,
+    orders: action.payload,
+  })),
   on(confirmedOrderSuccess,placeOrderSuccess, shipOrderSuccess, deliveryOrderSuccess, (state, {payload})=>({
     ...state,
     loading: false,
@@ -64,6 +90,7 @@ export const orderReducer = createReducer(
   })),
   on(createOrderFailure, getOrderByIdFailure, getOrderHistoryFailure,
     getAllOrderFailure,confirmedOrderFailure, placeOrderFailure,
+    getAllProductAssociateWithThatOrderCartFailed,
     shipOrderFailure, deliveryOrderFailure, deleteOrderFailure,(state, {error})=>({
     ...state,
     loading:false,

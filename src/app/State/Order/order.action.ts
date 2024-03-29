@@ -18,6 +18,15 @@ export const getOrderByIdSuccess=createAction(
 export const getOrderByIdFailure= createAction(
   '[Order] Get Order By Id Failure', props<{error: any}>()
 )
+export const getAllProductAssociateWithThatOrderCartRequest = createAction(
+  '[Order] Get All Product Associate With That Order Request'
+)
+export const getAllProductAssociateWithThatOrderCartSuccess = createAction(
+  '[Order] Get All Product Associate With That Order Success', props<{payload: any}>()
+)
+export const getAllProductAssociateWithThatOrderCartFailed = createAction(
+  '[Order] Get All Product Associate With That Order Failed', props<{error: any}>()
+)
 export const getOrderHistoryRequest=createAction(
   '[Order] Get Order History Request'
 )

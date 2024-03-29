@@ -30,7 +30,7 @@
           <button mat-menu-item (click)="changeStatus(order, 'DONE')">DONE</button>
         </mat-menu>
       </div>
-      <button class="bg-green-700 text-white font-medium text-lg px-2 py-1 h-full w-full rounded-md">See All Item</button>
+      <button (click)="openItemList(order.id)" class="bg-green-700 text-white font-medium text-lg px-2 py-1 h-full w-full rounded-md">See All Item</button>
       <hr>
     </div>
   </div>

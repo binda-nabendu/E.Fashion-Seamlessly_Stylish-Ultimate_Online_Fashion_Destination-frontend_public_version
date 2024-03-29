@@ -6,6 +6,8 @@ import {catchError, map, of} from "rxjs";
 import {
   createOrderFailure,
   createOrderSuccess,
+  getAllProductAssociateWithThatOrderCartFailed,
+  getAllProductAssociateWithThatOrderCartSuccess,
   getOrderByIdFailure,
   getOrderByIdSuccess, getOrderHistoryFailure, getOrderHistoryRequest,
   getOrderHistorySuccess
@@ -63,6 +65,24 @@ export class OrderService{
           ));
         })
       ).subscribe((action)=>this.store.dispatch(action))
+  }
+  getProductListAssociateOfThatOrderId(orderProductId: any) {
+    // console.log(orderProductId)
+    const url = BASE_API_URL+"/api/admin/orders/"+orderProductId;
+    const headers = this.getHttpHeadersWithJWT();
+    return this.httpClient.get(url, {headers})
+      .pipe(
+        map((getData:any) => {
+          // console.log("where is you:", getData.orderItems)
+          return getAllProductAssociateWithThatOrderCartSuccess({payload: getData.orderItems});
+        }),
+        catchError((error: any)=>{
+          return of(getAllProductAssociateWithThatOrderCartFailed(
+            error.response && error.response.data.message
+              ? error.response.data.message : error.message ))
+        })
+      )
+      .subscribe((action)=>this.store.dispatch(action));
   }
   getOrderHistoryService(orderId: any){
     const headers = this.getHttpHeadersWithJWT(); //if this name is change it won't work

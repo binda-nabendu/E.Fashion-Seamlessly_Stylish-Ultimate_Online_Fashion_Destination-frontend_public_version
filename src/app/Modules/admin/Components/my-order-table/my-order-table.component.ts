@@ -1,4 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, Input, signal} from '@angular/core';
+import {select, Store} from "@ngrx/store";
+import {AppState} from "../../../../Models/AppState";
+import {OrderService} from "../../../../State/Order/order.service";
+import {AuthComponent} from "../../../auth/auth.component";
+import {MatDialog} from "@angular/material/dialog";
+import {PaymentComponent} from "../../../features/Components/payment/payment.component";
+import {CartComponent} from "../../../features/Components/cart/cart.component";
+import {CartItemComponent} from "../../../shared/Components/cart-item/cart-item.component";
+import {OrderProductDetailsComponent} from "../order-product-details/order-product-details.component";
+import {CartService} from "../../../../State/Cart/cart.service";
 
 @Component({
   selector: 'app-my-order-table',
@@ -114,6 +124,21 @@ export class MyOrderTableComponent {
       "createAt": "2024-03-27T12:52:25.548908"
     }
   ]
+  products: any;
+  constructor(private matDialog: MatDialog) {
+  }
+  openItemList(id: number){
+    if(id){
+      // console.log(id.toString())
+    this.matDialog.open(OrderProductDetailsComponent, {
+      height:'80%',
+      disableClose: false,
+      data: {
+        orderProductId: id
+      }
+    });
+    }
+  };
   changeStatus(Order: any, status: any){
 
   }
