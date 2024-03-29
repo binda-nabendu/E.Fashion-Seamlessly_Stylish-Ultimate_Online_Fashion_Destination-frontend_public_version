@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './admin-home.component.css'
 })
 export class AdminHomeComponent {
-
+  submenu =[
+    {name: "Add Item", link:"products/crete"},
+    {name: "View Orders", link:"orders"}
+  ]
 }

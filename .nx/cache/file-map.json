@@ -64,7 +64,7 @@
         },
         {
           "file": "README.md",
-          "hash": "2449910852370079233"
+          "hash": "11889213606838400126"
         },
         {
           "file": "angular.json",
@@ -180,7 +180,7 @@
         },
         {
           "file": "src/Data/mainCarousel.ts",
-          "hash": "13797092810074232235"
+          "hash": "3886114784286269758"
         },
         {
           "file": "src/Data/navigation.jsx",
@@ -444,7 +444,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/cart/cart.component.html",
-          "hash": "9614407979824586600"
+          "hash": "15551930004663531847"
         },
         {
           "file": "src/app/Modules/features/Components/cart/cart.component.spec.ts",
@@ -561,7 +561,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.scss",
-          "hash": "3244421341483603138"
+          "hash": "6368997599263734687"
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.spec.ts",
@@ -572,7 +572,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/home.component.ts",
-          "hash": "4286342523413330002",
+          "hash": "15343257202617986892",
           "deps": [
             "npm:@angular/core",
             "npm:@ngrx/store"
@@ -580,11 +580,11 @@
         },
         {
           "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.html",
-          "hash": "9373105654306095529"
+          "hash": "968118141191618613"
         },
         {
           "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.scss",
-          "hash": "3244421341483603138"
+          "hash": "5340591665398307885"
         },
         {
           "file": "src/app/Modules/features/Components/home/item-product-slider/item-product-slider.component.spec.ts",
@@ -717,7 +717,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/payment/payment.component.html",
-          "hash": "17435595480048761938"
+          "hash": "864902372679441833"
         },
         {
           "file": "src/app/Modules/features/Components/payment/payment.component.spec.ts",
@@ -815,7 +815,7 @@
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.html",
-          "hash": "17449615185255502200"
+          "hash": "11736012862979368190"
         },
         {
           "file": "src/app/Modules/features/Components/product-with-filter/product-with-filter.component.spec.ts",
@@ -942,7 +942,7 @@
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.html",
-          "hash": "998471253082161651"
+          "hash": "14692205144377041625"
         },
         {
           "file": "src/app/Modules/shared/Components/navbar/navbar.component.spec.ts",
@@ -1217,7 +1217,7 @@
         },
         {
           "file": "src/assets/favicon.png",
-          "hash": "6641041382794865224"
+          "hash": "571616121175403248"
         },
         {
           "file": "src/index.html",
@@ -1232,7 +1232,7 @@
         },
         {
           "file": "src/styles.scss",
-          "hash": "16275067425104815431"
+          "hash": "8749775536057616472"
         },
         {
           "file": "tailwind.config.js",

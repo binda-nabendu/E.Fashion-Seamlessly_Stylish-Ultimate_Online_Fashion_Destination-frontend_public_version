@@ -8,11 +8,12 @@ import { AuthorProductsComponent } from './Components/author-products/author-pro
 import { MyCustomersComponent } from './Components/my-customers/my-customers.component';
 import { AddProductComponent } from './Components/add-product/add-product.component';
 import { MyOrderTableComponent } from './Components/my-order-table/my-order-table.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
-  
+
     AdminHomeComponent,
        DashboardComponent,
        AuthorProductsComponent,
@@ -20,9 +21,10 @@ import { MyOrderTableComponent } from './Components/my-order-table/my-order-tabl
        AddProductComponent,
        MyOrderTableComponent
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        FormsModule
+    ]
 })
 export class AdminModule { }

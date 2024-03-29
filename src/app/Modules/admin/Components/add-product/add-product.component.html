@@ -1,1 +1,59 @@
-<p>add-product works!</p>
+<div class="product-upload p-3">
+  <div class="form-group">
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" [(ngModel)]="product.imageUrl" name="imageUrl">
+  </div>
+  <div class="form-group">
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" [(ngModel)]="product.brand" name="brand">
+  </div>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="product.title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="color">Color:</label>
+    <input type="text" id="color" [(ngModel)]="product.color" name="color">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="product.description" name="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="discountPrice">Discounted Price:</label>
+    <input type="number" id="discountPrice" [(ngModel)]="product.discountPrice" name="discountPrice">
+  </div>
+  <div class="form-group">
+    <label for="actualPrice">Actual Price:</label>
+    <input type="number" id="actualPrice" [(ngModel)]="product.actualPrice" name="actualPrice">
+  </div>
+  <div class="form-group">
+    <label for="discountPercent">Discount Percent:</label>
+    <input type="number" id="discountPercent" [(ngModel)]="product.discountPercent" name="discountPercent">
+  </div>
+  <div class="form-group">
+    <label for="size">Sizes:</label>
+    <input type="text" id="size" [(ngModel)]="size" name="size">
+    <button (click)="addSize()">Add Size</button>
+    <ul>
+      <li *ngFor="let size of product.size">{{ size.name }} ({{ size.quantity }})</li>
+    </ul>
+  </div>
+  <div class="form-group">
+    <label for="quantity">Available Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity">
+  </div>
+  <div class="form-group">
+    <label for="topLabelCategory">Top Label Category:</label>
+    <input type="text" id="topLabelCategory" [(ngModel)]="product.topLabelCategory" name="topLabelCategory">
+  </div>
+  <div class="form-group">
+    <label for="secondLabelCategory">Second Label Category:</label>
+    <input type="text" id="secondLabelCategory" [(ngModel)]="product.secondLabelCategory" name="secondLabelCategory">
+  </div>
+  <div class="form-group">
+    <label for="thirdLabelCategory">Third Label Category:</label>
+    <input type="text" id="thirdLabelCategory" [(ngModel)]="product.thirdLabelCategory" name="thirdLabelCategory">
+  </div>
+  <button (click)="uploadProduct()">Upload Product</button>
+</div>
