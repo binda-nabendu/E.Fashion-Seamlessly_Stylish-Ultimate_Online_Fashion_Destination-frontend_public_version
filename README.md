@@ -1,7 +1,7 @@
-# Note: It is the base version To get the advanced version with all functionality and customization you can contact me. On the footer note, I give my information.
+**Note:** [It is the base version To get the advanced version with all functionality and customization you can contact me. On the footer note, I give my information.](#contact-information)
 # Fashion: Seamlessly Stylish - Ultimate Online Fashion Destination
 
-This is the frontend repository for the Eccomarce Handicraft project. It's built using Angular for the frontend logic and UI.
+This is the frontend repository for the Ecommerce Handicraft project. It's built using Angular for the frontend logic and UI.
 
 ## Introduction
 
@@ -36,11 +36,18 @@ To run the project locally, follow these steps:
 5. Start the development server: `ng serve`
 6. Open your browser and navigate to `http://localhost:4200`
 
-## Contributors
+## Contact Information
 
-- Nabendu Bikash Binda
-- Email: [binda.nabendu@gmail.com]()
-- website: [nabendu.vercel.app]()
+For any inquiries or assistance regarding this project, feel free to contact:
+
+* **Nabendu Bikash Binda**
+* **Email:** [binda.nabendu@gmail.com]()
+* **Phone:** `+8801611809276`
+* **Visit:** [nabendu.vercel.app]()
+
+## Backend Source Code
+You can Find Backend Source Code 
+[here](https://github.com/binda-nabendu/E.Fashion-Seamlessly_Stylish-Ultimate_Online_Fashion_Destination-Backend_API-public_version)
 
 ## License
 
