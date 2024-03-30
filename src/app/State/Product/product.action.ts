@@ -10,7 +10,16 @@ export const findProductByFiltersSuccess = createAction(
 export const findProductByFiltersFailure = createAction(
   '[Product] find product by filter failure',  props<{error:any}>()
 )
+export const addProductRequest = createAction(
+  '[Product] Add product Request'
+)
 
+export const addProductSuccess = createAction(
+  '[Product] Add product Success', props<{product: any}>()
+)
+export const addProductFailure = createAction(
+  '[Product] Add product failure',  props<{error:any}>()
+)
 export const findProductByIdRequest = createAction(
   '[Product] find product by Id Request'
 )

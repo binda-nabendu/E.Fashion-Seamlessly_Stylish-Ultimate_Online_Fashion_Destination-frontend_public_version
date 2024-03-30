@@ -1,5 +1,7 @@
 import {createReducer, on} from "@ngrx/store";
 import {
+  addProductFailure, addProductRequest,
+  addProductSuccess,
   findProductByFiltersFailure, findProductByFiltersRequest,
   findProductByFiltersSuccess,
   findProductByIdFailure, findProductByIdRequest,
@@ -22,7 +24,7 @@ const initialState: productInterface={
 
 export const productReducer = createReducer(
   initialState,
-  on(findProductByFiltersRequest, findProductByIdRequest, (state)=>({
+  on(findProductByFiltersRequest, findProductByIdRequest, addProductRequest, (state)=>({
       ...state,
       loading: true,
       error: null
@@ -37,6 +39,13 @@ export const productReducer = createReducer(
       product: null
     })
     ),
+  on(addProductSuccess, (state,{product})=>({
+      ...state,
+      loading: false,
+      error: null,
+      product: product
+    })
+  ),
   on(findProductByIdSuccess, (state, {payload})=>({
     ...state,
     product: payload,
@@ -44,7 +53,7 @@ export const productReducer = createReducer(
     error: null,
     products: []
   })),
-  on(findProductByFiltersFailure, findProductByIdFailure, (state, {error})=>({
+  on(findProductByFiltersFailure, findProductByIdFailure, addProductFailure, (state, {error})=>({
     ...state,
     loading: false,
     error: error

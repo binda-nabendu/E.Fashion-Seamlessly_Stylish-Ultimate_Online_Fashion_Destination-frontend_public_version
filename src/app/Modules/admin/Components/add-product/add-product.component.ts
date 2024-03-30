@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {ProductService} from "../../../../State/Product/product.service";
 
 @Component({
   selector: 'app-add-product',
@@ -24,7 +25,7 @@ export class AddProductComponent {
   };
   size: string = '';
 
-  constructor(private matSnackBar: MatSnackBar) {}
+  constructor(private matSnackBar: MatSnackBar, private productService: ProductService) {}
 
   addSize() {
     if (this.size.trim() !== '' && this.product.quantity >= 0) {
@@ -43,6 +44,7 @@ export class AddProductComponent {
   uploadProduct() {
     // Call the product service to upload the product data to the server
     console.log(this.product)
+    this.productService.addProductService(this.product);
   }
 
   resetProduct() {

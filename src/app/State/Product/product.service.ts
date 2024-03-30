@@ -5,6 +5,8 @@ import {Store} from "@ngrx/store";
 import {ActivatedRoute, Route} from "@angular/router";
 import {catchError, map, of} from "rxjs";
 import {
+  addProductFailure,
+  addProductSuccess,
   findProductByFiltersFailure,
   findProductByFiltersSuccess,
   findProductByIdFailure,
@@ -17,6 +19,8 @@ import {
 
 export class ProductService{
   API_BASE_URL = BASE_API_URL + "/api/products";
+
+  API_ADMIN_BASE_URL = BASE_API_URL + "/api/admin/products";
 
   constructor(private store: Store, private httpClient: HttpClient,
               private activeRoute: ActivatedRoute) {
@@ -79,6 +83,23 @@ export class ProductService{
         catchError((error: any)=>{
           // console.log(error)
           return of(findProductByIdFailure(
+            error.response && error.response.data.message ? error.response.data.message : error.message
+          ));
+        })
+      ).subscribe((action)=>this.store.dispatch(action))
+  }
+  addProductService(product: any){
+    // console.log("Product ID: "+ productId);
+    const headers = this.getHeaders();
+    return this.httpClient.post(this.API_BASE_URL + "/add", product, {headers: headers})
+      .pipe(
+        map((savedProduct: any)=>{
+          // console.log(item)
+          return addProductSuccess({product: savedProduct})
+        }),
+        catchError((error: any)=>{
+          // console.log(error)
+          return of(addProductFailure(
             error.response && error.response.data.message ? error.response.data.message : error.message
           ));
         })
