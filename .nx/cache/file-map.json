@@ -64,7 +64,7 @@
         },
         {
           "file": "README.md",
-          "hash": "11889213606838400126"
+          "hash": "8313410500332340420"
         },
         {
           "file": "angular.json",
@@ -212,11 +212,11 @@
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.css",
-          "hash": "3244421341483603138"
+          "hash": "4732451393425376995"
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.html",
-          "hash": "4709590053682767572"
+          "hash": "547714733255672884"
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.spec.ts",
@@ -227,9 +227,10 @@
         },
         {
           "file": "src/app/Modules/admin/Components/add-product/add-product.component.ts",
-          "hash": "14223739706436552506",
+          "hash": "8586141599516782727",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/material"
           ]
         },
         {
@@ -238,7 +239,7 @@
         },
         {
           "file": "src/app/Modules/admin/Components/admin-home.component.html",
-          "hash": "12225795784935807778"
+          "hash": "16388154708487161868"
         },
         {
           "file": "src/app/Modules/admin/Components/admin-home.component.spec.ts",
@@ -249,7 +250,7 @@
         },
         {
           "file": "src/app/Modules/admin/Components/admin-home.component.ts",
-          "hash": "7997004625920103032",
+          "hash": "1971598964109782703",
           "deps": [
             "npm:@angular/core"
           ]
@@ -326,7 +327,7 @@
         },
         {
           "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.html",
-          "hash": "3741180988297159546"
+          "hash": "3141514838071699534"
         },
         {
           "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.spec.ts",
@@ -337,9 +338,36 @@
         },
         {
           "file": "src/app/Modules/admin/Components/my-order-table/my-order-table.component.ts",
-          "hash": "1694753324652308142",
+          "hash": "13969173158189361202",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/order-product-details/order-product-details.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/order-product-details/order-product-details.component.html",
+          "hash": "121493028598497934"
+        },
+        {
+          "file": "src/app/Modules/admin/Components/order-product-details/order-product-details.component.spec.ts",
+          "hash": "5225984755423062176",
           "deps": [
             "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/Modules/admin/Components/order-product-details/order-product-details.component.ts",
+          "hash": "1628087686681778109",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "npm:@angular/router",
+            "npm:@angular/material"
           ]
         },
         {
@@ -352,10 +380,12 @@
         },
         {
           "file": "src/app/Modules/admin/admin.module.ts",
-          "hash": "18170212145463287673",
+          "hash": "11155596063043491345",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:@angular/material"
           ]
         },
         {
@@ -1095,21 +1125,21 @@
         },
         {
           "file": "src/app/State/Order/order.action.ts",
-          "hash": "10309046484245613359",
+          "hash": "16183183428123846306",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Order/order.reducer.ts",
-          "hash": "8703185226311517103",
+          "hash": "11113196810689104151",
           "deps": [
             "npm:@ngrx/store"
           ]
         },
         {
           "file": "src/app/State/Order/order.service.ts",
-          "hash": "14693501478683615335",
+          "hash": "4873497233604481247",
           "deps": [
             "npm:@angular/common",
             "npm:@angular/router",

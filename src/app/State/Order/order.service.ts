@@ -5,7 +5,7 @@ import {Store} from "@ngrx/store";
 import {catchError, map, of} from "rxjs";
 import {
   createOrderFailure,
-  createOrderSuccess,
+  createOrderSuccess, getAllOrderFailure, getAllOrderSuccess,
   getAllProductAssociateWithThatOrderCartFailed,
   getAllProductAssociateWithThatOrderCartSuccess,
   getOrderByIdFailure,
@@ -18,6 +18,7 @@ import {Injectable} from "@angular/core";
 })
 export class OrderService{
   API_BASE_URL = BASE_API_URL + '/api/user/order';
+  API_ADMIN_BASE_URL = BASE_API_URL + '/api/admin/orders';
   constructor(private httpClient: HttpClient, private router: Router,
               private activeRoure: ActivatedRoute, private store: Store) {
 
@@ -68,7 +69,7 @@ export class OrderService{
   }
   getProductListAssociateOfThatOrderId(orderProductId: any) {
     // console.log(orderProductId)
-    const url = BASE_API_URL+"/api/admin/orders/"+orderProductId;
+    const url = this.API_ADMIN_BASE_URL+"/"+orderProductId;
     const headers = this.getHttpHeadersWithJWT();
     return this.httpClient.get(url, {headers})
       .pipe(
@@ -103,7 +104,21 @@ export class OrderService{
 
   }
 getAllOrder(){
-
+  const url = this.API_ADMIN_BASE_URL+"/";
+  const headers = this.getHttpHeadersWithJWT();
+  return this.httpClient.get(url, {headers})
+    .pipe(
+      map((orders:any) => {
+        // console.log("where is you:", getData.orderItems)
+        return getAllOrderSuccess({payload: orders});
+      }),
+      catchError((error: any)=>{
+        return of(getAllOrderFailure(
+          error.response && error.response.data.message
+            ? error.response.data.message : error.message ))
+      })
+    )
+    .subscribe((action)=>this.store.dispatch(action));
 }
 confirmOrder(orderId: number){
 

@@ -35,13 +35,15 @@ export interface OrderState{
   error: string | null;
   order: any | null;
   orders: any[];
+  orderDetails: any;
 }
 
 const initialState: OrderState = {
   loading: false,
   error: null,
   order: null,
-  orders: []
+  orders: [],
+  orderDetails: []
 }
 
 export const orderReducer = createReducer(
@@ -72,7 +74,7 @@ export const orderReducer = createReducer(
   on(getAllOrderSuccess, (state, {payload})=>({
     ...state,
     loading: false,
-    orders: payload
+    orderDetails: payload
   })),
   on(getAllProductAssociateWithThatOrderCartSuccess, (state, action) => ({
     ...state, loading: false,

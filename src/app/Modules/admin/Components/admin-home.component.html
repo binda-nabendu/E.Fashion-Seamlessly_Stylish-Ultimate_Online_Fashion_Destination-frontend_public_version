@@ -1,5 +1,5 @@
 <div class="flex items-center h-screen">
-  <div class="h-full w-[20%] border border-r-gray-800">
+  <div class="h-full w-[20%] border border-r-gray-300 pt-3">
     <span *ngFor="let item of submenu; let odd = odd" [routerLink]="item.link"
           class="m-0 h-6 w-full text-md block pl-4 text-gray-600 font-medium cursor-pointer"
           [ngClass]="{'bg-gray-500': clickedItem === item ,'bg-gray-100': odd, 'text-white': clickedItem===item}"

@@ -125,7 +125,14 @@ export class MyOrderTableComponent {
     }
   ]
   products: any;
-  constructor(private matDialog: MatDialog) {
+  constructor(private matDialog: MatDialog, private orderService: OrderService, private store: Store<AppState>) {
+  }
+  ngOnInit(){
+    this.orderService.getAllOrder();
+    this.store.pipe(select((appState)=>appState.order)).subscribe( (order)=>
+      this.orders = order.orderDetails,
+    )
+
   }
   openItemList(id: number){
     if(id){
